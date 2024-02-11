@@ -1,0 +1,202 @@
+//  CoreGameComponent.swift
+//  Henry'sJoy
+//
+//  Created by Yi Ling on 2/9/24.
+//
+
+import Foundation
+import SwiftUI
+
+class CoreGameComponent: ObservableObject {
+    @Published var round: Int
+    @Published var turn: Int
+    @Published var scoreToVictory: Int
+    @Published var Henry: Player
+    @Published var Gambler: Player
+    
+    init(){
+        round = 1
+        turn = 0
+        scoreToVictory = 4000
+        Henry = Player(name:"Henry")
+        Gambler = Player(name:"Gambler")
+    }
+    
+    func NextRound (p:Player){
+        p.turn = 0
+        p.currentThrow = [:]
+        p.chosen = [:]
+        p.tempChosen = [:]
+        p.leftOver = [:]
+        p.currentStackedScore = 0
+        p.stackedScore = 0
+        p.num_chosen = 0
+        p.num_tempChosen = 0
+        round += 1
+    }
+    
+    func rollDice(p:Player){
+        let count =  6 - p.num_chosen
+        p.currentThrow = generateRandomnumbers(count:count).reduce(into:[:]){counts, element in counts[element, default:0] += 1}
+        p.leftOver = [:]
+        for (key,value) in p.currentThrow{
+            p.leftOver[key, default: 0] = value
+        }
+        p.currentStackedScore = 0
+        p.turn += 1
+        p.tempChosen = [:]
+    }
+    
+    func choose(p:Player, victim:Int){
+        if (p.leftOver[victim,default: 0] <= 1){
+            p.leftOver.removeValue(forKey: victim)
+        }else{
+            p.leftOver[victim,default: 0] -= 1
+        }
+        
+        if p.tempChosen.keys.contains(victim){
+            p.tempChosen[victim,default: 0] += 1
+        }else{
+            p.tempChosen[victim,default: 0] = 1
+        }
+        p.num_tempChosen += 1
+        p.currentStackedScore = getScore(match: p.tempChosen)
+    }
+    
+    func dechoose(p:Player, victim:Int){
+        if (p.tempChosen[victim,default: 0] <= 1){
+            p.tempChosen.removeValue(forKey: victim)
+        }else{
+            p.tempChosen[victim,default: 0] -= 1
+        }
+        
+        if p.leftOver.keys.contains(victim){
+            p.leftOver[victim,default: 0] += 1
+        }else{
+            p.leftOver[victim,default: 0] = 1
+        }
+        p.num_tempChosen -= 1
+        p.currentStackedScore = getScore(match: p.tempChosen)
+    }
+    
+    func stackScore(p:Player){
+        for (key,value) in p.tempChosen{
+            if p.chosen.keys.contains(key){
+                p.chosen[key,default: 0] += value
+                p.num_chosen += value
+            }else{
+                p.chosen[key,default: 0] = value
+                p.num_chosen += value
+            }
+        }
+        if p.num_chosen == 6{
+            p.num_chosen = 0
+        }
+        p.tempChosen = [:]
+        p.num_tempChosen = 0
+        p.stackedScore = getScore(match: p.chosen)
+    }
+    
+    func farkleScore(p:Player){
+        p.currentScore += p.stackedScore
+        p.stackedScore = 0
+        NextRound(p:p)
+    }
+    
+    func aiPlay(p:Player){
+        NextRound(p: p)
+    }
+    
+    func judgeIfLegal(match:[Int:Int]) -> Bool {
+        for (key, value) in match{
+            if (key != 1 && key != 5 && value <= 2){
+                return false
+            }
+        }
+        return true
+    }
+    
+    func ScrapTheBowl(p:Player){
+        p.tempChosen = [:]
+        p.num_tempChosen = 0
+        for (key, value) in p.currentThrow{
+            if (key == 1){
+                p.tempChosen[key,default: 0] = value
+                p.leftOver.removeValue(forKey: key)
+                p.num_tempChosen += value
+                
+            }else if (key == 5){
+                p.tempChosen[key,default: 0] = value
+                p.leftOver.removeValue(forKey: key)
+                p.num_tempChosen += value
+            }else{
+                if (value >= 3){
+                    p.tempChosen[key,default: 0] = value
+                    p.leftOver.removeValue(forKey: key)
+                    p.num_tempChosen += value
+                }
+            }
+        }
+        p.currentStackedScore = getScore(match: p.tempChosen)
+    }
+    
+    func getScore(match:[Int:Int]) -> Int {
+        var score = 0
+        for (key, value) in match{
+            if (key == 1){
+                if (value <= 2){
+                    score += 100 * value
+                }else{
+                    score += 1000 * (value - 2)
+                }
+            }else if (key == 5){
+                if (value <= 2){
+                    score += 50 * value
+                }else{
+                    score += 50 * (value - 2)
+                }
+            }else{
+                if (value >= 3){
+                    score += key * 100 * (value - 2)
+                }
+            }
+        }
+        return score
+    }
+}
+
+class Player{
+    @Published var name: String
+    @Published var currentThrow: [Int:Int]
+    @Published var chosen: [Int:Int]
+    @Published var leftOver: [Int:Int]
+    @Published var tempChosen: [Int:Int]
+    @Published var currentScore: Int
+    @Published var stackedScore: Int
+    @Published var num_left: Int
+    @Published var num_chosen: Int
+    @Published var currentStackedScore: Int
+    @Published var turn: Int
+    @Published var num_tempChosen: Int
+    
+    init(name:String) {
+        self.name = name
+        self.currentThrow = [:]
+        self.chosen = [:]
+        self.leftOver = [:]
+        self.tempChosen = [:]
+        self.currentScore = 0
+        self.stackedScore = 0
+        self.num_left = 6
+        self.num_chosen = 0
+        self.turn = 0
+        self.currentStackedScore = 0
+        self.num_tempChosen = 0
+    }
+}
+
+func generateRandomnumbers (count:Int) -> [Int] {
+    return (0..<count).map { _ in
+                Int.random(in: 1...6)
+    }
+}

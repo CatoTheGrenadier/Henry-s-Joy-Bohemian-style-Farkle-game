@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		28D6AC1B2B7879CC00721385 /* Henry_sJoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC1A2B7879CC00721385 /* Henry_sJoyApp.swift */; };
-		28D6AC1D2B7879CC00721385 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC1C2B7879CC00721385 /* ContentView.swift */; };
+		28D6AC1D2B7879CC00721385 /* FarkleGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC1C2B7879CC00721385 /* FarkleGame.swift */; };
 		28D6AC1F2B7879CE00721385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D6AC1E2B7879CE00721385 /* Assets.xcassets */; };
 		28D6AC232B7879CE00721385 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D6AC222B7879CE00721385 /* Preview Assets.xcassets */; };
 		28D6AC2D2B7879CE00721385 /* Henry_sJoyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC2C2B7879CE00721385 /* Henry_sJoyTests.swift */; };
 		28D6AC372B7879CE00721385 /* Henry_sJoyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC362B7879CE00721385 /* Henry_sJoyUITests.swift */; };
 		28D6AC392B7879CE00721385 /* Henry_sJoyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC382B7879CE00721385 /* Henry_sJoyUITestsLaunchTests.swift */; };
+		28D6AC472B787A7C00721385 /* diceTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC462B787A7C00721385 /* diceTable.swift */; };
+		28D6AC492B787AA800721385 /* HenryZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC482B787AA800721385 /* HenryZone.swift */; };
+		28D6AC4B2B787B3B00721385 /* CoreGameComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC4A2B787B3B00721385 /* CoreGameComponent.swift */; };
+		28D6AC4D2B787B4F00721385 /* GamblerZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC4C2B787B4F00721385 /* GamblerZone.swift */; };
+		28D6AC4F2B787B7800721385 /* MoneyAndRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC4E2B787B7800721385 /* MoneyAndRound.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,7 @@
 /* Begin PBXFileReference section */
 		28D6AC172B7879CC00721385 /* Henry'sJoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Henry'sJoy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D6AC1A2B7879CC00721385 /* Henry_sJoyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Henry_sJoyApp.swift; sourceTree = "<group>"; };
-		28D6AC1C2B7879CC00721385 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		28D6AC1C2B7879CC00721385 /* FarkleGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarkleGame.swift; sourceTree = "<group>"; };
 		28D6AC1E2B7879CE00721385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28D6AC202B7879CE00721385 /* Henry_sJoy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Henry_sJoy.entitlements; sourceTree = "<group>"; };
 		28D6AC222B7879CE00721385 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +50,11 @@
 		28D6AC322B7879CE00721385 /* Henry'sJoyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Henry'sJoyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D6AC362B7879CE00721385 /* Henry_sJoyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Henry_sJoyUITests.swift; sourceTree = "<group>"; };
 		28D6AC382B7879CE00721385 /* Henry_sJoyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Henry_sJoyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		28D6AC462B787A7C00721385 /* diceTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diceTable.swift; sourceTree = "<group>"; };
+		28D6AC482B787AA800721385 /* HenryZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HenryZone.swift; sourceTree = "<group>"; };
+		28D6AC4A2B787B3B00721385 /* CoreGameComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGameComponent.swift; sourceTree = "<group>"; };
+		28D6AC4C2B787B4F00721385 /* GamblerZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamblerZone.swift; sourceTree = "<group>"; };
+		28D6AC4E2B787B7800721385 /* MoneyAndRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAndRound.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +105,14 @@
 		28D6AC192B7879CC00721385 /* Henry'sJoy */ = {
 			isa = PBXGroup;
 			children = (
+				28D6AC452B787A5500721385 /* diceTable.subComponents */,
 				28D6AC1A2B7879CC00721385 /* Henry_sJoyApp.swift */,
-				28D6AC1C2B7879CC00721385 /* ContentView.swift */,
+				28D6AC1C2B7879CC00721385 /* FarkleGame.swift */,
 				28D6AC1E2B7879CE00721385 /* Assets.xcassets */,
+				28D6AC462B787A7C00721385 /* diceTable.swift */,
 				28D6AC202B7879CE00721385 /* Henry_sJoy.entitlements */,
 				28D6AC212B7879CE00721385 /* Preview Content */,
+				28D6AC4A2B787B3B00721385 /* CoreGameComponent.swift */,
 			);
 			path = "Henry'sJoy";
 			sourceTree = "<group>";
@@ -127,6 +140,16 @@
 				28D6AC382B7879CE00721385 /* Henry_sJoyUITestsLaunchTests.swift */,
 			);
 			path = "Henry'sJoyUITests";
+			sourceTree = "<group>";
+		};
+		28D6AC452B787A5500721385 /* diceTable.subComponents */ = {
+			isa = PBXGroup;
+			children = (
+				28D6AC482B787AA800721385 /* HenryZone.swift */,
+				28D6AC4C2B787B4F00721385 /* GamblerZone.swift */,
+				28D6AC4E2B787B7800721385 /* MoneyAndRound.swift */,
+			);
+			path = diceTable.subComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28D6AC1D2B7879CC00721385 /* ContentView.swift in Sources */,
+				28D6AC492B787AA800721385 /* HenryZone.swift in Sources */,
+				28D6AC1D2B7879CC00721385 /* FarkleGame.swift in Sources */,
+				28D6AC4D2B787B4F00721385 /* GamblerZone.swift in Sources */,
+				28D6AC4F2B787B7800721385 /* MoneyAndRound.swift in Sources */,
+				28D6AC4B2B787B3B00721385 /* CoreGameComponent.swift in Sources */,
 				28D6AC1B2B7879CC00721385 /* Henry_sJoyApp.swift in Sources */,
+				28D6AC472B787A7C00721385 /* diceTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
