@@ -15,6 +15,14 @@ class CoreGameComponent: ObservableObject {
     @Published var Gambler: Player
     
     init(){
+        round = 0
+        turn = 0
+        scoreToVictory = 4000
+        Henry = Player(name:"Henry")
+        Gambler = Player(name:"Gambler")
+    }
+    
+    func newGame(){
         round = 1
         turn = 0
         scoreToVictory = 4000
@@ -36,6 +44,10 @@ class CoreGameComponent: ObservableObject {
     }
     
     func rollDice(p:Player){
+        if p.num_chosen == 6{
+            p.num_chosen = 0
+            p.chosen = [:]
+        }
         let count =  6 - p.num_chosen
         p.currentThrow = generateRandomnumbers(count:count).reduce(into:[:]){counts, element in counts[element, default:0] += 1}
         p.leftOver = [:]
@@ -89,9 +101,7 @@ class CoreGameComponent: ObservableObject {
                 p.num_chosen += value
             }
         }
-        if p.num_chosen == 6{
-            p.num_chosen = 0
-        }
+        
         p.tempChosen = [:]
         p.num_tempChosen = 0
         p.stackedScore = getScore(match: p.chosen)
@@ -153,7 +163,7 @@ class CoreGameComponent: ObservableObject {
                 if (value <= 2){
                     score += 50 * value
                 }else{
-                    score += 50 * (value - 2)
+                    score += 500 * (value - 2)
                 }
             }else{
                 if (value >= 3){
