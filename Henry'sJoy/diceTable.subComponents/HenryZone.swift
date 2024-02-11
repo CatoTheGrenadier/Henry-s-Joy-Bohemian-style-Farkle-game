@@ -120,9 +120,12 @@ struct HenryZone: View {
                 }
             }
             Text("Oh no! Henry messed up!")
-            Button("Let Gambler play"){
-                coreComponents.NextRound(p:coreComponents.Henry)
-            }
+            Text("It's Gambler's turn now!")
+                .onAppear(){
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                        coreComponents.NextRound(p:coreComponents.Henry)
+                    }
+                }
         }
         
     }

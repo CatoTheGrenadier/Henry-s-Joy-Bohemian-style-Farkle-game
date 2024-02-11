@@ -102,9 +102,9 @@ class CoreGameComponent: ObservableObject {
             }
         }
         
-        p.tempChosen = [:]
         p.num_tempChosen = 0
-        p.stackedScore = getScore(match: p.chosen)
+        p.stackedScore += getScore(match: p.tempChosen)
+        p.tempChosen = [:]
     }
     
     func farkleScore(p:Player){
@@ -134,18 +134,24 @@ class CoreGameComponent: ObservableObject {
                 p.tempChosen[key,default: 0] = value
                 p.leftOver.removeValue(forKey: key)
                 p.num_tempChosen += value
+                p.difficulty -= value
                 
             }else if (key == 5){
                 p.tempChosen[key,default: 0] = value
                 p.leftOver.removeValue(forKey: key)
                 p.num_tempChosen += value
+                p.difficulty -= value
             }else{
                 if (value >= 3){
                     p.tempChosen[key,default: 0] = value
                     p.leftOver.removeValue(forKey: key)
                     p.num_tempChosen += value
+                    p.difficulty -= value
                 }
             }
+        }
+        if p.difficulty == 1{
+            p.difficulty = 7
         }
         p.currentStackedScore = getScore(match: p.tempChosen)
     }
@@ -188,6 +194,7 @@ class Player{
     @Published var currentStackedScore: Int
     @Published var turn: Int
     @Published var num_tempChosen: Int
+    @Published var difficulty: Int
     
     init(name:String) {
         self.name = name
@@ -202,6 +209,7 @@ class Player{
         self.turn = 0
         self.currentStackedScore = 0
         self.num_tempChosen = 0
+        self.difficulty = 7
     }
 }
 

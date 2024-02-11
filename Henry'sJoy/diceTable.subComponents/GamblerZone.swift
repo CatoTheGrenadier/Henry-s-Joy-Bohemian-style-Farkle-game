@@ -41,8 +41,8 @@ struct GamblerZone: View {
                     if posScore == 0 {
                             
                         let randomToken = Int.random(in: 1...10)
-                            
-                        if (randomToken <= 7){
+                        
+                        if (randomToken <= coreComponents.Gambler.difficulty){
                             Text("Gambler decided to take risk!")
                                 .onAppear(){
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
@@ -116,10 +116,13 @@ struct GamblerZone: View {
                     }
                 }
             }
-            Text("Oh no! Gambler messed up!")
-            Button("Let Henry play"){
-                coreComponents.NextRound(p:coreComponents.Gambler)
-            }
+            Text("Gambler messed up!")
+            Text("It's Henry's turn now!")
+                .onAppear(){
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                        coreComponents.NextRound(p:coreComponents.Gambler)
+                    }
+                }
         }
         
     }
