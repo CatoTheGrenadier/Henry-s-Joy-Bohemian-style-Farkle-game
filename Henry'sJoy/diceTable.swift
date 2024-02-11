@@ -31,6 +31,9 @@ struct diceTable: View {
                         coreComponents.newGame()
                     }
                 }else{
+                    Button("Start New Game"){
+                        coreComponents.newGame()
+                    }
                     moneyAndRound(coreComponents: coreComponents)
                         .padding(20)
                     GamblerZone(coreComponents: coreComponents)
