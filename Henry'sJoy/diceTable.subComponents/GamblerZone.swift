@@ -73,15 +73,21 @@ struct GamblerZone: View {
                 }
                 
                 HStack{
-                    ForEach(Array(coreComponents.Gambler.chosen), id:\.key){ key, value in
-                        if (value >= 1){
-                            ForEach(0..<value, id: \.self){index in
-                                
-                                let die_3 = coreComponents.diceMap[key] ?? "default"
-                                
-                                Text(String(die_3))
-                                    .font(.system(size: 50))
-                                    .padding(10)
+                    if coreComponents.Gambler.num_chosen == 0{
+                        Button(""){}
+                            .font(.system(size: 50))
+                            .padding(10)
+                    }else{
+                        ForEach(Array(coreComponents.Gambler.chosen), id:\.key){ key, value in
+                            if (value >= 1){
+                                ForEach(0..<value, id: \.self){index in
+                                    
+                                    let die_3 = coreComponents.diceMap[key] ?? "default"
+                                    
+                                    Text(String(die_3))
+                                        .font(.system(size: 50))
+                                        .padding(10)
+                                }
                             }
                         }
                     }
@@ -89,16 +95,22 @@ struct GamblerZone: View {
                 .padding(10)
                 
                 HStack{
-                    ForEach(Array(coreComponents.Gambler.tempChosen), id:\.key){ key, value in
-                        
-                        if (value >= 1){
-                            ForEach(0..<value, id: \.self){index in
-                                
-                                let die_2 = coreComponents.diceMap[key] ?? "default"
-                                
-                                Text(String(die_2))
-                                    .font(.system(size: 50))
-                                    .padding(10)
+                    if coreComponents.Gambler.num_tempChosen == 0{
+                        Button(""){}
+                            .font(.system(size: 50))
+                            .padding(10)
+                    }else{
+                        ForEach(Array(coreComponents.Gambler.tempChosen), id:\.key){ key, value in
+                            
+                            if (value >= 1){
+                                ForEach(0..<value, id: \.self){index in
+                                    
+                                    let die_2 = coreComponents.diceMap[key] ?? "default"
+                                    
+                                    Text(String(die_2))
+                                        .font(.system(size: 50))
+                                        .padding(10)
+                                }
                             }
                         }
                     }
@@ -122,19 +134,29 @@ struct GamblerZone: View {
                 
             }
         }else if (possibleScore == 0 && coreComponents.round % 2 == 0){
-            HStack{
-                ForEach(Array(coreComponents.Gambler.currentThrow), id:\.key){ key, value in
-                    if (value >= 1){
-                        ForEach(0..<value, id: \.self){index in
-                            
-                            let die_4 = coreComponents.diceMap[key] ?? "default"
-                            
-                            Text(String(die_4))
-                                .font(.system(size: 50))
-                                .padding(10)
+            VStack{
+                HStack{
+                    Button(""){}
+                        .font(.system(size: 50))
+                        .padding(10)
+                    ForEach(Array(coreComponents.Gambler.currentThrow), id:\.key){ key, value in
+                        if (value >= 1){
+                            ForEach(0..<value, id: \.self){index in
+                                
+                                let die_4 = coreComponents.diceMap[key] ?? "default"
+                                
+                                Text(String(die_4))
+                                    .font(.system(size: 50))
+                                    .padding(10)
+                            }
                         }
                     }
                 }
+                Button(" "){}
+                    .font(.system(size: 50))
+                    .padding(10)
+                Button(" "){}
+                    .font(.system(size: 50))
             }
             Text("Gambler messed up!")
             Text("It's Henry's turn now!")
