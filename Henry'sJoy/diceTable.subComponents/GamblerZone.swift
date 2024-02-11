@@ -30,7 +30,7 @@ struct GamblerZone: View {
         if (coreComponents.round % 2 == 0 && (coreComponents.Gambler.turn == 0 || possibleScore > 0 || coreComponents.Gambler.currentStackedScore > 0) ){
             VStack{
                 if (coreComponents.Gambler.turn == 0){
-                    Text("The Gambler is going to throw!")
+                    Text("Gambler is going to throw!")
                         .onAppear(){
                             DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                                 coreComponents.rollDice(p: coreComponents.Gambler)
