@@ -13,7 +13,7 @@ struct diceTable: View {
     var body: some View {
         VStack{
             if (coreComponents.round == 0){
-                Text("Welcome to the game!")
+                Text("Welcome to Sasau!")
                     .padding(100)
                 Button("PLAY!"){
                     coreComponents.newGame()
