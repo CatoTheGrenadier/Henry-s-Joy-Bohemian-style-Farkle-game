@@ -72,12 +72,6 @@ struct GamblerZone: View {
                     }
                 }
                 
-                Text("leftover: \(NSDictionary(dictionary:coreComponents.Gambler.leftOver))")
-                    .id(dummy)
-                
-                Text("chosen: \(NSDictionary(dictionary:coreComponents.Gambler.chosen))")
-                    .id(dummy)
-                
                 HStack{
                     ForEach(Array(coreComponents.Gambler.leftOver), id:\.key){ key, value in
                         if (value >= 1){
