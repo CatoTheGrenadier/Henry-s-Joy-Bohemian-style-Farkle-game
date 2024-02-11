@@ -11,6 +11,7 @@ class CoreGameComponent: ObservableObject {
     @Published var round: Int
     @Published var turn: Int
     @Published var scoreToVictory: Int
+    @Published var diceMap: [Int:String]
     @Published var Henry: Player
     @Published var Gambler: Player
     
@@ -18,10 +19,11 @@ class CoreGameComponent: ObservableObject {
         round = 0
         turn = 0
         scoreToVictory = 4000
+        diceMap = [1:"⚀", 2:"⚁", 3:"⚂", 4:"⚃", 5: "⚄", 6:"⚅"]
         Henry = Player(name:"Henry")
         Gambler = Player(name:"Gambler")
     }
-    
+
     func newGame(){
         round = 1
         turn = 0
