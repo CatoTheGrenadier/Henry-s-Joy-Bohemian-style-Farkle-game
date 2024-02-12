@@ -183,15 +183,15 @@ struct HenryZone: View {
                 }
         }
         
-        Text("At Hand:  \(coreComponents.Henry.currentStackedScore)")
+        Text("Selected :  \(coreComponents.Henry.currentStackedScore)")
             .id(dummy)
             .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
         
-        Text("Stacked:  \(coreComponents.Henry.stackedScore)")
+        Text("Stacked :  \(coreComponents.Henry.stackedScore)")
             .id(dummy)
             .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
         
-        Text("Total:  \(coreComponents.Henry.currentScore)")
+        Text("Total :  \(coreComponents.Henry.currentScore)")
             .id(dummy)
             .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
     }

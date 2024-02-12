@@ -14,8 +14,20 @@ struct farkleGame: View {
     var body: some View {
         VStack {
             if coreComponents.state == 0{
-                Text("Farkler of Sasau")
+                Text("F")
+                    .foregroundColor(Color.red)
+                    .font(Font.custom("Maximilian", size: 56))
+                +
+                Text("arkler of ")
                     .font(Font.custom("Maximilian", size: 36))
+                +
+                Text("S")
+                    .foregroundColor(Color.red)
+                    .font(Font.custom("Maximilian", size: 56))
+                +
+                Text("asau")
+                    .font(Font.custom("Maximilian", size: 36))
+                
                 diceTable(coreComponents: coreComponents)
                 if coreComponents.round == 0{
                     Button("Rules"){

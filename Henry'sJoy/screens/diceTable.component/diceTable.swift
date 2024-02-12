@@ -27,6 +27,7 @@ struct diceTable: View {
                 if (coreComponents.Henry.currentScore >= coreComponents.scoreToVictory){
                     Text("Henry is victorious!")
                         .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                        .foregroundColor(Color.red)
                         .padding()
                     Button("Start Over"){
                         coreComponents.newGame()
@@ -35,6 +36,7 @@ struct diceTable: View {
                 }else if (coreComponents.Gambler.currentScore >= coreComponents.scoreToVictory){
                     Text("Oh no! Henry lost!")
                         .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                        .foregroundColor(Color.red)
                         .padding()
                     Button("Start Over"){
                         coreComponents.newGame()

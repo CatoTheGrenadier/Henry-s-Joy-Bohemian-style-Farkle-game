@@ -14,15 +14,15 @@ struct GamblerZone: View {
 
     
     var body: some View {
-        Text("At hand:  \(coreComponents.Gambler.currentStackedScore)")
+        Text("Selected :  \(coreComponents.Gambler.currentStackedScore)")
             .id(dummy)
             .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
         
-        Text("Stacked:  \(coreComponents.Gambler.stackedScore)")
+        Text("Stacked :  \(coreComponents.Gambler.stackedScore)")
             .id(dummy)
             .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
         
-        Text("Total:  \(coreComponents.Gambler.currentScore)")
+        Text("Total :  \(coreComponents.Gambler.currentScore)")
             .id(dummy)
             .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
         
