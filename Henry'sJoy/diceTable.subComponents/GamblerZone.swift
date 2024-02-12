@@ -14,14 +14,17 @@ struct GamblerZone: View {
 
     
     var body: some View {
-        Text("currentStackedScore:\(coreComponents.Gambler.currentStackedScore)")
+        Text("At hand:  \(coreComponents.Gambler.currentStackedScore)")
             .id(dummy)
-
-        Text("stackedScore:\(coreComponents.Gambler.stackedScore)")
-            .id(dummy)
+            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
         
-        Text("TotalScore:\(coreComponents.Gambler.currentScore)")
+        Text("Stacked:  \(coreComponents.Gambler.stackedScore)")
             .id(dummy)
+            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+        
+        Text("Total:  \(coreComponents.Gambler.currentScore)")
+            .id(dummy)
+            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
         
         let possibleScore = coreComponents.getScore(match: coreComponents.Gambler.currentThrow)
         
@@ -31,6 +34,9 @@ struct GamblerZone: View {
             VStack{
                 if (coreComponents.Gambler.turn == 0){
                     Text("Gambler is going to throw!")
+                        .padding(10)
+                        .foregroundColor(Color.red)
+                        .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                         .onAppear(){
                             DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                                 coreComponents.rollDice(p: coreComponents.Gambler)
@@ -44,6 +50,9 @@ struct GamblerZone: View {
                         
                         if (randomToken <= coreComponents.Gambler.difficulty){
                             Text("Gambler decided to take risk!")
+                                .padding(10)
+                                .foregroundColor(Color.red)
+                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                                 .onAppear(){
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                                         coreComponents.stackScore(p: coreComponents.Gambler)
@@ -53,6 +62,9 @@ struct GamblerZone: View {
                                 }
                         }else{
                             Text("Gambler decided to stop here!")
+                                .padding(10)
+                                .foregroundColor(Color.red)
+                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                                 .onAppear(){
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                                         coreComponents.stackScore(p: coreComponents.Gambler)
@@ -63,6 +75,9 @@ struct GamblerZone: View {
                         }
                     }else{
                         Text("Gambler came up with a strategy!")
+                            .padding(10)
+                            .foregroundColor(Color.red)
+                            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                             .onAppear(){
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                                     coreComponents.ScrapTheBowl(p: coreComponents.Gambler)
@@ -159,7 +174,9 @@ struct GamblerZone: View {
                     .font(.system(size: 50))
             }
             Text("Gambler messed up!")
+                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
             Text("It's Henry's turn now!")
+                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                 .onAppear(){
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                         coreComponents.NextRound(p:coreComponents.Gambler)

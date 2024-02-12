@@ -106,25 +106,40 @@ struct HenryZone: View {
                         dummy.toggle()
                         
                     }
+                    .padding(10)
+                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                 }else{
                     
                     if (coreComponents.judgeIfLegal(match: coreComponents.Henry.tempChosen) && coreComponents.Henry.num_tempChosen >= 1){
                         
-                        Button("Throw again"){
-                            coreComponents.stackScore(p: coreComponents.Henry)
-                            coreComponents.rollDice(p: coreComponents.Henry)
-                            dummy.toggle()
+                        HStack{
+                            Button("Throw again"){
+                                coreComponents.stackScore(p: coreComponents.Henry)
+                                coreComponents.rollDice(p: coreComponents.Henry)
+                                dummy.toggle()
+                            }
+                            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                            .padding(25)
+                            
+                            Button("Farkle"){
+                                coreComponents.stackScore(p: coreComponents.Henry)
+                                coreComponents.farkleScore(p: coreComponents.Henry)
+                                dummy.toggle()
+                            }
+                            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                            .padding(25)
                         }
                         
-                        Button("Farkle"){
-                            coreComponents.stackScore(p: coreComponents.Henry)
-                            coreComponents.farkleScore(p: coreComponents.Henry)
-                            dummy.toggle()
-                        }
                     }else if (coreComponents.Henry.num_tempChosen < 1){
                         Text("You need to choose at least one dice!")
+                            .foregroundColor(Color.red)
+                            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                            .padding(10)
                     }else{
-                        Text("That don't work!")
+                        Text("That doesn't work!")
+                            .foregroundColor(Color.red)
+                            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                            .padding(10)
                     }
                 }
                 
@@ -152,7 +167,9 @@ struct HenryZone: View {
                     .font(.system(size: 50))
             }
             Text("Oh no! Henry messed up!")
+                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
             Text("It's Gamble's turn now!")
+                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                 .onAppear(){
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                         coreComponents.NextRound(p:coreComponents.Henry)
@@ -160,15 +177,17 @@ struct HenryZone: View {
                 }
         }
         
-        Text("currentStackedScore:\(coreComponents.Henry.currentStackedScore)")
+        Text("At Hand:  \(coreComponents.Henry.currentStackedScore)")
             .id(dummy)
-
-        Text("stackedScore:\(coreComponents.Henry.stackedScore)")
-            .id(dummy)
+            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
         
-        Text("TotalScore:\(coreComponents.Henry.currentScore)")
+        Text("Stacked:  \(coreComponents.Henry.stackedScore)")
             .id(dummy)
+            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
         
+        Text("Total:  \(coreComponents.Henry.currentScore)")
+            .id(dummy)
+            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
     }
 }
 

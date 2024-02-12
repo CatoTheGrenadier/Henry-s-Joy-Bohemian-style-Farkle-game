@@ -11,6 +11,7 @@ struct farkleGame: View {
     var body: some View {
         VStack {
             Text("Inn of Sasau")
+                .font(Font.custom("Maximilian", size: 36))
             diceTable()
         }
      }

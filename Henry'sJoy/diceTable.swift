@@ -10,32 +10,49 @@ import SwiftUI
 
 struct diceTable: View {
     @ObservedObject var coreComponents = CoreGameComponent()
+    @State private var showAlert = false
     var body: some View {
         VStack{
             if (coreComponents.round == 0){
-                Text("Welcome to Sasau!")
-                    .padding(100)
-                Button("PLAY!"){
+                Button("PLAY"){
                     coreComponents.newGame()
                 }
+                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
             }else{
                 
                 if (coreComponents.Henry.currentScore >= coreComponents.scoreToVictory){
                     Text("Henry is victorious!")
+                        .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                     Button("Start Over"){
                         coreComponents.newGame()
                     }
+                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                 }else if (coreComponents.Gambler.currentScore >= coreComponents.scoreToVictory){
                     Text("Oh no! Henry lost!")
+                        .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                     Button("Start Over"){
                         coreComponents.newGame()
                     }
+                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                 }else{
-                    Button("Start New Game"){
-                        coreComponents.newGame()
+                    HStack{
+                        Text("Round \((coreComponents.round - coreComponents.round % 2)/2 + 1)")
+                            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                            .padding(30)
+                        
+                        Button("New Game"){
+                            showAlert = true
+                        }
+                        .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                        .alert(isPresented: $showAlert){
+                            Alert(title: Text("Start Over"),
+                                  message: Text("Are you sure about starting over?"),
+                                  primaryButton: .default(Text("Yes")){coreComponents.newGame()},
+                                  secondaryButton: .cancel()
+                            )
+                        }
                     }
-                    moneyAndRound(coreComponents: coreComponents)
-                        .padding(20)
+                    
                     GamblerZone(coreComponents: coreComponents)
                     Spacer()
                     HenryZone(coreComponents:coreComponents)
