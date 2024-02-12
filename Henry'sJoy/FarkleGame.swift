@@ -17,7 +17,6 @@ struct farkleGame: View {
                 Text("Farkler of Sasau")
                     .font(Font.custom("Maximilian", size: 36))
                 diceTable(coreComponents: coreComponents)
-                    .padding(10)
                 if coreComponents.round == 0{
                     Button("Rules"){
                         coreComponents.state = 1
@@ -25,16 +24,17 @@ struct farkleGame: View {
                     }
                     .padding(10)
                     .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
-                    
-                    Button("Profile"){
+                
+                    Button("About"){
                         coreComponents.state = 2
                         dummy.toggle()
                     }
                     .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
-                    
                 }
             }else if coreComponents.state == 1{
                 Rules(coreComponents: coreComponents)
+            }else{
+                About(coreComponents: coreComponents)
             }
         }
      }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Rules: View {
     @ObservedObject var coreComponents:CoreGameComponent
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         VStack(spacing:0){
             ScrollView{
@@ -133,6 +135,7 @@ struct Rules: View {
             .padding(15)
             Button("Back to Main Screen"){
                 coreComponents.state = 0
+                presentationMode.wrappedValue.dismiss()
             }
             .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
             .foregroundColor(Color.black)
