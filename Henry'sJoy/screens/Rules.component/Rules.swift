@@ -96,11 +96,7 @@ struct Rules: View {
                     }
                     .padding(1)
                     
-                    Text("A player's turn always begins by throwing all six dice. The player then has to select and set aside scoring dice, and at least one die must always be set aside. Then the player can throw the remaining dice again and the situation repeats. Scoring combinations are counted for present throw, not the entire turn.")
-                        .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
-                        .padding()
-                    
-                    Text("The key element of the game is that if a throw does not produce a single scoring die, then the player's turn is over and all points gained up to that point during the turn are lost. It is then the opposing player's turn to throw.Therefore, it is advisable to end your turn before there is a significant increase in the chance that not a single die will score. It is also often worth not setting aside all scoring dice so that you will have a better chance of scoring higher on the next throw.")
+                    Text("A player's turn always begins by throwing all six dice. The player then has to select and set aside scoring dice, and at least one die must always be set aside. Then the player can throw the remaining dice again and the situation repeats. Scoring combinations are counted for present throw, not the entire turn. The key element of the game is that if a throw does not produce a single scoring die, then the player's turn is over and all points gained up to that point during the turn are lost. It is then the opposing player's turn to throw.Therefore, it is advisable to end your turn before there is a significant increase in the chance that not a single die will score. It is also often worth not setting aside all scoring dice so that you will have a better chance of scoring higher on the next throw.")
                         .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                         .padding()
                 }

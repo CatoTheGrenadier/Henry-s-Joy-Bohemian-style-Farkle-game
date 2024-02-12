@@ -13,6 +13,7 @@ import SwiftUI
 struct About: View {
     @ObservedObject var coreComponents:CoreGameComponent
     @Environment(\.presentationMode) var presentationMode
+    @State private var showGreetAlert = false
     
     var body: some View {
         VStack{
@@ -57,13 +58,61 @@ struct About: View {
                         .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                         .multilineTextAlignment(.leading)
                         .padding()
-                    
                 }
+                .multilineTextAlignment(.leading)
                 
                 VStack{
                     Image("Inn")
                         .resizable()
                         .padding()
+                }
+                
+                Button(action:{
+                    showGreetAlert.toggle()
+                }){
+                    HStack(spacing:0){
+                        Text("W")
+                            .foregroundColor(Color.red)
+                            .font(Font.custom("Maximilian", size: 70))
+                            .multilineTextAlignment(.leading)
+                        Text("ish ")
+                            .foregroundColor(Color.black)
+                            .font(Font.custom("Maximilian", size: 40))
+                            .multilineTextAlignment(.leading)
+                        Text("Y")
+                            .foregroundColor(Color.red)
+                            .font(Font.custom("Maximilian", size: 70))
+                            .multilineTextAlignment(.leading)
+                        Text("ou ")
+                            .foregroundColor(Color.black)
+                            .font(Font.custom("Maximilian", size: 40))
+                            .multilineTextAlignment(.leading)
+                        
+                        Text("a ")
+                            .foregroundColor(Color.black)
+                            .font(Font.custom("Maximilian", size: 40))
+                            .multilineTextAlignment(.leading)
+
+                        Text("H")
+                            .foregroundColor(Color.red)
+                            .font(Font.custom("Maximilian", size: 70))
+                            .multilineTextAlignment(.leading)
+                        Text("appy ")
+                            .foregroundColor(Color.black)
+                            .font(Font.custom("Maximilian", size: 40))
+                            .multilineTextAlignment(.leading)
+                        Text("D")
+                            .foregroundColor(Color.red)
+                            .font(Font.custom("Maximilian", size: 70))
+                            .multilineTextAlignment(.leading)
+                        Text("ay!")
+                            .foregroundColor(Color.black)
+                            .font(Font.custom("Maximilian", size: 40))
+                            .multilineTextAlignment(.leading)
+                    }
+                    .alert(isPresented: $showGreetAlert){
+                        Alert(title: Text("Thank you!"), message: Text("Good day to you too!"), dismissButton: .default(Text("God Bless You!")))
+                    }
                 }
                 
             }
