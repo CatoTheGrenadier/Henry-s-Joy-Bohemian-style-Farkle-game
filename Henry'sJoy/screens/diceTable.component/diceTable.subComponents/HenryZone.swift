@@ -118,8 +118,22 @@ struct HenryZone: View {
                     }){
                         HStack{
                             Image("Roll")
-                            Text("Roll Dice")
-                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                            
+                            Text("R")
+                                .foregroundColor(Color.red)
+                                .font(Font.custom("Maximilian", size: 30))
+                            +
+                            Text("oll ")
+                                .foregroundColor(Color.black)
+                                .font(Font.custom("Maximilian", size: 30))
+                            +
+                            Text("D")
+                                .foregroundColor(Color.red)
+                                .font(Font.custom("Maximilian", size: 30))
+                            +
+                            Text("ice")
+                                .foregroundColor(Color.black)
+                                .font(Font.custom("Maximilian", size: 30))
                         }
                     }
                     .padding(10)

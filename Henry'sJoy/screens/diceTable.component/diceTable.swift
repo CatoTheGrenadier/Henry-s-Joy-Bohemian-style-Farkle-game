@@ -17,11 +17,12 @@ struct diceTable: View {
     var body: some View {
         VStack{
             if (coreComponents.round == 0){
-                Button("PLAY"){
+                Button("||  PLAY  ||"){
                     coreComponents.newGame()
                 }
+                .foregroundColor(Color.black)
                 .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
-                .padding(10)
+                .padding(5)
             }else{
                 
                 if (coreComponents.Henry.currentScore >= coreComponents.scoreToVictory){

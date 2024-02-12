@@ -101,9 +101,9 @@
 		2892EE942B79BB8300CC97A3 /* screens */ = {
 			isa = PBXGroup;
 			children = (
+				28DD3AD52B7A648A00652D9F /* About.component */,
+				28DD3AD42B7A647A00652D9F /* Rules.component */,
 				2892EE952B79BBD000CC97A3 /* diceTable.component */,
-				2892EE922B79A61000CC97A3 /* Rules.swift */,
-				2892EE962B79C89900CC97A3 /* About.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -140,6 +140,7 @@
 		28D6AC192B7879CC00721385 /* Henry'sJoy */ = {
 			isa = PBXGroup;
 			children = (
+				28DD3AD62B7A64AD00652D9F /* scripts */,
 				2892EE942B79BB8300CC97A3 /* screens */,
 				2892EE8D2B798E0A00CC97A3 /* Henry-sJoy-Info.plist */,
 				2892EE882B798B2600CC97A3 /* assets */,
@@ -148,7 +149,6 @@
 				28D6AC1E2B7879CE00721385 /* Assets.xcassets */,
 				28D6AC202B7879CE00721385 /* Henry_sJoy.entitlements */,
 				28D6AC212B7879CE00721385 /* Preview Content */,
-				28D6AC4A2B787B3B00721385 /* CoreGameComponent.swift */,
 			);
 			path = "Henry'sJoy";
 			sourceTree = "<group>";
@@ -185,6 +185,30 @@
 				28D6AC4C2B787B4F00721385 /* GamblerZone.swift */,
 			);
 			path = diceTable.subComponents;
+			sourceTree = "<group>";
+		};
+		28DD3AD42B7A647A00652D9F /* Rules.component */ = {
+			isa = PBXGroup;
+			children = (
+				2892EE922B79A61000CC97A3 /* Rules.swift */,
+			);
+			path = Rules.component;
+			sourceTree = "<group>";
+		};
+		28DD3AD52B7A648A00652D9F /* About.component */ = {
+			isa = PBXGroup;
+			children = (
+				2892EE962B79C89900CC97A3 /* About.swift */,
+			);
+			path = About.component;
+			sourceTree = "<group>";
+		};
+		28DD3AD62B7A64AD00652D9F /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				28D6AC4A2B787B3B00721385 /* CoreGameComponent.swift */,
+			);
+			path = scripts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
