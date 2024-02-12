@@ -49,7 +49,13 @@ struct farkleGame: View {
                 About(coreComponents: coreComponents)
             }
         }
+        .background(
+            Image("Cover")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .edgesIgnoringSafeArea(.all))
      }
+    
 }
 
 #Preview {

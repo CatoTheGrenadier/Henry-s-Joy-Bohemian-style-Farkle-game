@@ -97,10 +97,12 @@ struct GamblerZone: View {
                             if (value >= 1){
                                 ForEach(0..<value, id: \.self){index in
                                     
-                                    let die_3 = coreComponents.diceMap[key] ?? "default"
+                                    let die_3 = coreComponents.diceImageMap[key] ?? "default"
                                     
-                                    Text(String(die_3))
-                                        .font(.system(size: 50))
+                                    Image(die_3)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 25, height: 25)
                                         .padding(10)
                                 }
                             }
@@ -120,10 +122,12 @@ struct GamblerZone: View {
                             if (value >= 1){
                                 ForEach(0..<value, id: \.self){index in
                                     
-                                    let die_2 = coreComponents.diceMap[key] ?? "default"
+                                    let die_2 = coreComponents.diceImageMap[key] ?? "default"
                                     
-                                    Text(String(die_2))
-                                        .font(.system(size: 50))
+                                    Image(die_2)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 25, height: 25)
                                         .padding(10)
                                 }
                             }
@@ -137,10 +141,12 @@ struct GamblerZone: View {
                         if (value >= 1){
                             ForEach(0..<value, id: \.self){index in
                                 
-                                let die_1 = coreComponents.diceMap[key] ?? "default"
+                                let die_1 = coreComponents.diceImageMap[key] ?? "default"
                                 
-                                Text(String(die_1))
-                                    .font(.system(size:50))
+                                Image(die_1)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 25, height: 25)
                                     .padding(10)
                             }
                         }
@@ -158,10 +164,12 @@ struct GamblerZone: View {
                         if (value >= 1){
                             ForEach(0..<value, id: \.self){index in
                                 
-                                let die_4 = coreComponents.diceMap[key] ?? "default"
+                                let die_4 = coreComponents.diceImageMap[key] ?? "default"
                                 
-                                Text(String(die_4))
-                                    .font(.system(size: 50))
+                                Image(die_4)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 25, height: 25)
                                     .padding(10)
                             }
                         }

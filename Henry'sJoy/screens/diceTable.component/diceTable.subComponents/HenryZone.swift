@@ -24,10 +24,9 @@ struct HenryZone: View {
                         if (value >= 1){
                             ForEach(0..<value, id: \.self){index in
                                 
-                                let die_1 = coreComponents.diceMap[key] ?? "default"
+                                let die_1 = coreComponents.diceImageMap[key] ?? "default"
                                 
-                                Button(String(die_1)){
-                                    
+                                Button(action:{
                                     if !isProcessing{
                                         
                                         isProcessing = true
@@ -37,10 +36,13 @@ struct HenryZone: View {
                                         isProcessing = false
                                     }
                                     dummy.toggle()
+                                }){
+                                    Image(die_1)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 25, height: 25)
+                                        .padding(10)
                                 }
-                                .font(.system(size:50))
-                                .foregroundColor(Color.black)
-                                .padding(10)
                             }
                         }
                     }
@@ -59,9 +61,9 @@ struct HenryZone: View {
                             if (value >= 1){
                                 ForEach(0..<value, id: \.self){index in
                                     
-                                    let die_2 = coreComponents.diceMap[key] ?? "default"
+                                    let die_2 = coreComponents.diceImageMap[key] ?? "default"
                                     
-                                    Button(String(die_2)){
+                                    Button(action:{
                                         if !isProcessing{
                                             isProcessing = true
                                             
@@ -70,10 +72,13 @@ struct HenryZone: View {
                                             isProcessing = false
                                         }
                                         dummy.toggle()
+                                    }){
+                                        Image(die_2)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 25, height: 25)
+                                            .padding(10)
                                     }
-                                    .font(.system(size:50))
-                                    .foregroundColor(Color.black)
-                                    .padding(10)
                                 }
                             }
                         }
@@ -93,10 +98,13 @@ struct HenryZone: View {
                             if (value >= 1){
                                 ForEach(0..<value, id: \.self){index in
                                     
-                                    let die_3 = coreComponents.diceMap[key] ?? "default"
+                                    let die_3 = coreComponents.diceImageMap[key] ?? "default"
                                     
-                                    Text(String(die_3))
-                                        .font(.system(size: 50))
+                                    Image(die_3)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 25, height: 25)
+                                        .padding(10)
                                 }
                             }
                         }
@@ -104,13 +112,17 @@ struct HenryZone: View {
                 }
                 
                 if (coreComponents.Henry.turn == 0){
-                    Button("Roll Dice"){
+                    Button(action:{
                         coreComponents.rollDice(p: coreComponents.Henry)
                         dummy.toggle()
-                        
+                    }){
+                        HStack{
+                            Image("Roll")
+                            Text("Roll Dice")
+                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                        }
                     }
                     .padding(10)
-                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                 }else{
                     
                     if (coreComponents.judgeIfLegal(match: coreComponents.Henry.tempChosen) && coreComponents.Henry.num_tempChosen >= 1){
@@ -154,10 +166,12 @@ struct HenryZone: View {
                         if (value >= 1){
                             ForEach(0..<value, id: \.self){index in
                                 
-                                let die_4 = coreComponents.diceMap[key] ?? "default"
+                                let die_4 = coreComponents.diceImageMap[key] ?? "default"
                                 
-                                Text(String(die_4))
-                                    .font(.system(size: 50))
+                                Image(die_4)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 25, height: 25)
                                     .padding(10)
                             }
                         }

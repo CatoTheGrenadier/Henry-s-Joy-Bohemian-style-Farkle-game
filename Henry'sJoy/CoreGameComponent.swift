@@ -12,6 +12,7 @@ class CoreGameComponent: ObservableObject {
     @Published var turn: Int
     @Published var scoreToVictory: Int
     @Published var diceMap: [Int:String]
+    @Published var diceImageMap: [Int:String]
     @Published var Henry: Player
     @Published var Gambler: Player
     @Published var state = 0
@@ -22,6 +23,7 @@ class CoreGameComponent: ObservableObject {
         turn = 0
         scoreToVictory = 4000
         diceMap = [1:"⚀", 2:"⚁", 3:"⚂", 4:"⚃", 5: "⚄", 6:"⚅"]
+        diceImageMap = [1:"Dice1",2:"Dice2", 3:"Dice3", 4:"Dice4",5:"Dice5",6:"Dice6"]
         Henry = Player(name:"Henry")
         Gambler = Player(name:"Gambler")
     }
