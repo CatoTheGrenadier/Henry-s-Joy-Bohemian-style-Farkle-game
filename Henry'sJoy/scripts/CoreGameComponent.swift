@@ -167,7 +167,7 @@ class CoreGameComponent: ObservableObject {
             }
         }
         if p.difficulty == 1{
-            p.difficulty = 7
+            p.difficulty = p.difficultyInit
         }
         p.currentStackedScore = getScore(match: p.tempChosen)
     }
@@ -211,6 +211,8 @@ class Player{
     @Published var turn: Int
     @Published var num_tempChosen: Int
     @Published var difficulty: Int
+    @Published var difficultyInit: Int
+    @Published var difficultyMap: [Int:String]
     
     init(name:String) {
         self.name = name
@@ -226,6 +228,8 @@ class Player{
         self.currentStackedScore = 0
         self.num_tempChosen = 0
         self.difficulty = 7
+        self.difficultyInit = 7
+        self.difficultyMap = [5:"Hard",7:"Normal",9:"Easy"]
     }
 }
 

@@ -14,18 +14,31 @@ struct GamblerZone: View {
 
     
     var body: some View {
-        Text("Selected :  \(coreComponents.Gambler.currentStackedScore)")
-            .id(dummy)
-            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
-        
-        Text("Stacked :  \(coreComponents.Gambler.stackedScore)")
-            .id(dummy)
-            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
-        
-        Text("Total :  \(coreComponents.Gambler.currentScore)")
-            .id(dummy)
-            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
-        
+        HStack{
+            if coreComponents.round % 2 == 0{
+                Text(coreComponents.Gambler.name)
+                    .foregroundColor(Color.red)
+                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                    .padding(20)
+            }else{
+                Text(coreComponents.Gambler.name)
+                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                    .padding(20)
+            }
+            VStack{
+                Text("Selected :  \(coreComponents.Gambler.currentStackedScore)")
+                    .id(dummy)
+                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                
+                Text("Stacked :  \(coreComponents.Gambler.stackedScore)")
+                    .id(dummy)
+                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                
+                Text("Total :  \(coreComponents.Gambler.currentScore)")
+                    .id(dummy)
+                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+            }
+        }
         let possibleScore = coreComponents.getScore(match: coreComponents.Gambler.currentThrow)
         
         let posScore = coreComponents.getScore(match: coreComponents.Gambler.leftOver)

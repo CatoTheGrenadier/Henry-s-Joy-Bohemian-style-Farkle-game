@@ -15,28 +15,51 @@ struct farkleGame: View {
         ZStack{
             Image("Cover")
                 .resizable()
-                .aspectRatio(contentMode: .fill)
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
                 if coreComponents.state == 0{
-                    Text("F")
-                        .foregroundColor(Color.red)
-                        .font(Font.custom("Maximilian", size: 56))
-                    +
-                    Text("arkler of ")
-                        .foregroundColor(Color.black)
-                        .font(Font.custom("Maximilian", size: 36))
-                    +
-                    Text("S")
-                        .foregroundColor(Color.red)
-                        .font(Font.custom("Maximilian", size: 56))
-                    +
-                    Text("asau")
-                        .foregroundColor(Color.black)
-                        .font(Font.custom("Maximilian", size: 36))
-                    
-                    diceTable(coreComponents: coreComponents)
+                    if coreComponents.round != 0{
+                        VStack(spacing:0){
+                            Text("F")
+                                .foregroundColor(Color.red)
+                                .font(Font.custom("Maximilian", size: 56))
+                            +
+                            Text("arkler of ")
+                                .foregroundColor(Color.black)
+                                .font(Font.custom("Maximilian", size: 36))
+                            +
+                            Text("S")
+                                .foregroundColor(Color.red)
+                                .font(Font.custom("Maximilian", size: 56))
+                            +
+                            Text("asau")
+                                .foregroundColor(Color.black)
+                                .font(Font.custom("Maximilian", size: 36))
+                            
+                            diceTable(coreComponents: coreComponents)
+                        }
+                    }else{
+                            VStack(){
+                                Text("F")
+                                    .foregroundColor(Color.red)
+                                    .font(Font.custom("Maximilian", size: 56))
+                                +
+                                Text("arkler of ")
+                                    .foregroundColor(Color.black)
+                                    .font(Font.custom("Maximilian", size: 36))
+                                +
+                                Text("S")
+                                    .foregroundColor(Color.red)
+                                    .font(Font.custom("Maximilian", size: 56))
+                                +
+                                Text("asau")
+                                    .foregroundColor(Color.black)
+                                    .font(Font.custom("Maximilian", size: 36))
+                                
+                                diceTable(coreComponents: coreComponents)
+                        }
+                    }
                     if coreComponents.round == 0{
                         Button("||  Rules  ||"){
                             coreComponents.state = 1

@@ -83,12 +83,12 @@ struct HenryZone: View {
                             }
                         }
                     }
-
+                    
                 }
                 .padding(10)
                 
                 HStack{
-                     
+                    
                     if coreComponents.Henry.num_chosen == 0{
                         Button(""){}
                             .font(.system(size:50))
@@ -117,6 +117,10 @@ struct HenryZone: View {
                         dummy.toggle()
                     }){
                         HStack{
+                            Text("|| ")
+                                .foregroundColor(Color.black)
+                                .font(Font.custom("Maximilian", size: 30))
+                            
                             Image("Roll")
                             
                             Text("R")
@@ -134,6 +138,11 @@ struct HenryZone: View {
                             Text("ice")
                                 .foregroundColor(Color.black)
                                 .font(Font.custom("Maximilian", size: 30))
+                            
+                            Text(" ||")
+                                .foregroundColor(Color.black)
+                                .font(Font.custom("Maximilian", size: 30))
+                            
                         }
                     }
                     .padding(10)
@@ -142,23 +151,60 @@ struct HenryZone: View {
                     if (coreComponents.judgeIfLegal(match: coreComponents.Henry.tempChosen) && coreComponents.Henry.num_tempChosen >= 1){
                         
                         HStack{
-                            Button("Throw again"){
+                            Text("||")
+                                .foregroundColor(Color.black)
+                                .font(Font.custom("Maximilian", size: 30))
+                            Button(action:{
                                 coreComponents.stackScore(p: coreComponents.Henry)
                                 coreComponents.rollDice(p: coreComponents.Henry)
                                 dummy.toggle()
+                                
+                            }){
+                                HStack{
+                                    
+                                    Text("T")
+                                        .foregroundColor(Color.red)
+                                        .font(Font.custom("Maximilian", size: 25))
+                                    +
+                                    Text("hrow ")
+                                        .foregroundColor(Color.black)
+                                        .font(Font.custom("Maximilian", size: 25))
+                                    +
+                                    Text("A")
+                                        .foregroundColor(Color.red)
+                                        .font(Font.custom("Maximilian", size: 25))
+                                    +
+                                    Text("gain")
+                                        .foregroundColor(Color.black)
+                                        .font(Font.custom("Maximilian", size: 25))
+                                }
                             }
-                            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
-                            .padding(25)
                             
-                            Button("Farkle"){
+                            Text("||")
+                                .foregroundColor(Color.black)
+                                .font(Font.custom("Maximilian", size: 30))
+                            
+                            Button(action:{
                                 coreComponents.stackScore(p: coreComponents.Henry)
                                 coreComponents.farkleScore(p: coreComponents.Henry)
                                 dummy.toggle()
+                                
+                            }){
+                                HStack{
+                                    Text(" F")
+                                        .foregroundColor(Color.red)
+                                        .font(Font.custom("Maximilian", size: 25))
+                                    +
+                                    Text("arkle    ")
+                                        .foregroundColor(Color.black)
+                                        .font(Font.custom("Maximilian", size: 25))
+                                }
                             }
-                            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
-                            .padding(25)
+                            
+                            Text("||")
+                                .foregroundColor(Color.black)
+                                .font(Font.custom("Maximilian", size: 30))
                         }
-                        
                     }else if (coreComponents.Henry.num_tempChosen < 1){
                         Text("You need to choose at least one dice!")
                             .foregroundColor(Color.red)
@@ -211,17 +257,32 @@ struct HenryZone: View {
                 }
         }
         
-        Text("Selected :  \(coreComponents.Henry.currentStackedScore)")
-            .id(dummy)
-            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
-        
-        Text("Stacked :  \(coreComponents.Henry.stackedScore)")
-            .id(dummy)
-            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
-        
-        Text("Total :  \(coreComponents.Henry.currentScore)")
-            .id(dummy)
-            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+        HStack{
+            if coreComponents.round % 2 == 1{
+                Text(coreComponents.Henry.name)
+                    .foregroundColor(Color.red)
+                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                    .padding(40)
+            }else{
+                Text(coreComponents.Henry.name)
+                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                    .padding(40)
+            }
+            VStack{
+                
+                Text("Selected :  \(coreComponents.Henry.currentStackedScore)")
+                    .id(dummy)
+                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                
+                Text("Stacked :  \(coreComponents.Henry.stackedScore)")
+                    .id(dummy)
+                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                
+                Text("Total :  \(coreComponents.Henry.currentScore)")
+                    .id(dummy)
+                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+            }
+        }
     }
 }
 
