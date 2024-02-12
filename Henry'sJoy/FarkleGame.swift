@@ -8,11 +8,34 @@
 import SwiftUI
 
 struct farkleGame: View {
+    @ObservedObject var coreComponents = CoreGameComponent()
+    @State private var dummy: Bool = false
+    
     var body: some View {
         VStack {
-            Text("Inn of Sasau")
-                .font(Font.custom("Maximilian", size: 36))
-            diceTable()
+            if coreComponents.state == 0{
+                Text("Farkler of Sasau")
+                    .font(Font.custom("Maximilian", size: 36))
+                diceTable(coreComponents: coreComponents)
+                    .padding(10)
+                if coreComponents.round == 0{
+                    Button("Rules"){
+                        coreComponents.state = 1
+                        dummy.toggle()
+                    }
+                    .padding(10)
+                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
+                    
+                    Button("Profile"){
+                        coreComponents.state = 2
+                        dummy.toggle()
+                    }
+                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
+                    
+                }
+            }else if coreComponents.state == 1{
+                Rules(coreComponents: coreComponents)
+            }
         }
      }
 }

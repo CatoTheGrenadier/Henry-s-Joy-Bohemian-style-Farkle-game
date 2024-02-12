@@ -175,8 +175,10 @@ struct GamblerZone: View {
             }
             Text("Gambler messed up!")
                 .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                .foregroundColor(Color.red)
             Text("It's Henry's turn now!")
                 .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                .foregroundColor(Color.red)
                 .onAppear(){
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                         coreComponents.NextRound(p:coreComponents.Gambler)

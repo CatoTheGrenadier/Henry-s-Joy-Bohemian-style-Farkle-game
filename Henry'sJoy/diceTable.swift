@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct diceTable: View {
-    @ObservedObject var coreComponents = CoreGameComponent()
+    @ObservedObject var coreComponents:CoreGameComponent
     @State private var showAlert = false
     var body: some View {
         VStack{
@@ -46,8 +46,11 @@ struct diceTable: View {
                         .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                         .alert(isPresented: $showAlert){
                             Alert(title: Text("Start Over"),
-                                  message: Text("Are you sure about starting over?"),
-                                  primaryButton: .default(Text("Yes")){coreComponents.newGame()},
+                                  message: Text("Do you want to start over?"),
+                                  primaryButton: .default(Text("Yes")){
+                                        coreComponents.newGame()
+                                        coreComponents.round = 0
+                                    },
                                   secondaryButton: .cancel()
                             )
                         }

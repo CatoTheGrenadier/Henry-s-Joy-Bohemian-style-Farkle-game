@@ -14,6 +14,7 @@ class CoreGameComponent: ObservableObject {
     @Published var diceMap: [Int:String]
     @Published var Henry: Player
     @Published var Gambler: Player
+    @Published var state = 0
     
     init(){
         round = 0

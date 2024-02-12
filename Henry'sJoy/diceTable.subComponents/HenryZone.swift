@@ -19,6 +19,7 @@ struct HenryZone: View {
         if (coreComponents.round % 2 == 1 && (coreComponents.Henry.turn == 0 || possibleScore > 0 || coreComponents.Henry.currentStackedScore > 0) ){
             VStack{
                 HStack{
+                    
                     ForEach(Array(coreComponents.Henry.leftOver), id:\.key){ key, value in
                         if (value >= 1){
                             ForEach(0..<value, id: \.self){index in
@@ -47,6 +48,7 @@ struct HenryZone: View {
                 .padding(10)
                 
                 HStack{
+                    
                     if coreComponents.Henry.num_tempChosen == 0{
                         Button(" "){}
                             .font(.system(size:50))
@@ -81,6 +83,7 @@ struct HenryZone: View {
                 .padding(10)
                 
                 HStack{
+                     
                     if coreComponents.Henry.num_chosen == 0{
                         Button(""){}
                             .font(.system(size:50))
@@ -160,6 +163,7 @@ struct HenryZone: View {
                         }
                     }
                 }
+                
                 Button(" "){}
                     .font(.system(size: 50))
                     .padding(10)
@@ -167,8 +171,10 @@ struct HenryZone: View {
                     .font(.system(size: 50))
             }
             Text("Oh no! Henry messed up!")
+                .foregroundColor(Color.red)
                 .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
             Text("It's Gamble's turn now!")
+                .foregroundColor(Color.red)
                 .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                 .onAppear(){
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
