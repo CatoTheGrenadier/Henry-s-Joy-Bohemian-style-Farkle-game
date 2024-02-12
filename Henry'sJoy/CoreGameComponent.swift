@@ -15,6 +15,7 @@ class CoreGameComponent: ObservableObject {
     @Published var Henry: Player
     @Published var Gambler: Player
     @Published var state = 0
+    @Published var displayRound = 0
     
     init(){
         round = 0
@@ -24,6 +25,14 @@ class CoreGameComponent: ObservableObject {
         Henry = Player(name:"Henry")
         Gambler = Player(name:"Gambler")
     }
+    
+    func updateDisplayRound(){
+        if round % 2 == 1{
+            displayRound = (round + 1) / 2
+        }else{
+            displayRound = round / 2
+        }
+    }
 
     func newGame(){
         round = 1
@@ -31,6 +40,7 @@ class CoreGameComponent: ObservableObject {
         scoreToVictory = 4000
         Henry = Player(name:"Henry")
         Gambler = Player(name:"Gambler")
+        updateDisplayRound()
     }
     
     func NextRound (p:Player){
@@ -44,6 +54,7 @@ class CoreGameComponent: ObservableObject {
         p.num_chosen = 0
         p.num_tempChosen = 0
         round += 1
+        updateDisplayRound()
     }
     
     func rollDice(p:Player){

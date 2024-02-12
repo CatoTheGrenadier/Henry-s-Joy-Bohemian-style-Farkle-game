@@ -109,7 +109,7 @@ struct diceTable: View {
                     }
                     .padding()
                     
-                    Text("Round \((coreComponents.round - coreComponents.round % 2)/2 + 1)")
+                    Text("Round \(coreComponents.displayRound)")
                         .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                     
                     GamblerZone(coreComponents: coreComponents)
