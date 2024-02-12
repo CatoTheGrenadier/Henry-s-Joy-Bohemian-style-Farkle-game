@@ -1,0 +1,706 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2892EE932B79A61000CC97A3 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2892EE922B79A61000CC97A3 /* Rules.swift */; };
+		2892EE972B79C89900CC97A3 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2892EE962B79C89900CC97A3 /* About.swift */; };
+		28D6AC1B2B7879CC00721385 /* Henry_sJoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC1A2B7879CC00721385 /* Henry_sJoyApp.swift */; };
+		28D6AC1D2B7879CC00721385 /* FarkleGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC1C2B7879CC00721385 /* FarkleGame.swift */; };
+		28D6AC1F2B7879CE00721385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D6AC1E2B7879CE00721385 /* Assets.xcassets */; };
+		28D6AC232B7879CE00721385 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D6AC222B7879CE00721385 /* Preview Assets.xcassets */; };
+		28D6AC2D2B7879CE00721385 /* Henry_sJoyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC2C2B7879CE00721385 /* Henry_sJoyTests.swift */; };
+		28D6AC372B7879CE00721385 /* Henry_sJoyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC362B7879CE00721385 /* Henry_sJoyUITests.swift */; };
+		28D6AC392B7879CE00721385 /* Henry_sJoyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC382B7879CE00721385 /* Henry_sJoyUITestsLaunchTests.swift */; };
+		28D6AC472B787A7C00721385 /* diceTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC462B787A7C00721385 /* diceTable.swift */; };
+		28D6AC492B787AA800721385 /* HenryZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC482B787AA800721385 /* HenryZone.swift */; };
+		28D6AC4B2B787B3B00721385 /* CoreGameComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC4A2B787B3B00721385 /* CoreGameComponent.swift */; };
+		28D6AC4D2B787B4F00721385 /* GamblerZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC4C2B787B4F00721385 /* GamblerZone.swift */; };
+		28DD3AD02B7A559400652D9F /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 28DD3ACF2B7A559400652D9F /* fonts */; };
+		28DD3AD32B7A55B500652D9F /* images in Resources */ = {isa = PBXBuildFile; fileRef = 28DD3AD22B7A55B500652D9F /* images */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28D6AC292B7879CE00721385 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28D6AC0F2B7879CC00721385 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28D6AC162B7879CC00721385;
+			remoteInfo = "Henry'sJoy";
+		};
+		28D6AC332B7879CE00721385 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28D6AC0F2B7879CC00721385 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28D6AC162B7879CC00721385;
+			remoteInfo = "Henry'sJoy";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2892EE8D2B798E0A00CC97A3 /* Henry-sJoy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Henry-sJoy-Info.plist"; sourceTree = SOURCE_ROOT; };
+		2892EE922B79A61000CC97A3 /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		2892EE962B79C89900CC97A3 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		28D6AC172B7879CC00721385 /* Henry'sJoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Henry'sJoy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28D6AC1A2B7879CC00721385 /* Henry_sJoyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Henry_sJoyApp.swift; sourceTree = "<group>"; };
+		28D6AC1C2B7879CC00721385 /* FarkleGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarkleGame.swift; sourceTree = "<group>"; };
+		28D6AC1E2B7879CE00721385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28D6AC202B7879CE00721385 /* Henry_sJoy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Henry_sJoy.entitlements; sourceTree = "<group>"; };
+		28D6AC222B7879CE00721385 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		28D6AC282B7879CE00721385 /* Henry'sJoyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Henry'sJoyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28D6AC2C2B7879CE00721385 /* Henry_sJoyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Henry_sJoyTests.swift; sourceTree = "<group>"; };
+		28D6AC322B7879CE00721385 /* Henry'sJoyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Henry'sJoyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28D6AC362B7879CE00721385 /* Henry_sJoyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Henry_sJoyUITests.swift; sourceTree = "<group>"; };
+		28D6AC382B7879CE00721385 /* Henry_sJoyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Henry_sJoyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		28D6AC462B787A7C00721385 /* diceTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diceTable.swift; sourceTree = "<group>"; };
+		28D6AC482B787AA800721385 /* HenryZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HenryZone.swift; sourceTree = "<group>"; };
+		28D6AC4A2B787B3B00721385 /* CoreGameComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGameComponent.swift; sourceTree = "<group>"; };
+		28D6AC4C2B787B4F00721385 /* GamblerZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamblerZone.swift; sourceTree = "<group>"; };
+		28DD3ACF2B7A559400652D9F /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		28DD3AD22B7A55B500652D9F /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28D6AC142B7879CC00721385 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28D6AC252B7879CE00721385 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28D6AC2F2B7879CE00721385 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2892EE882B798B2600CC97A3 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				28DD3AD22B7A55B500652D9F /* images */,
+				28DD3ACF2B7A559400652D9F /* fonts */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		2892EE942B79BB8300CC97A3 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				28DD3AD52B7A648A00652D9F /* About.component */,
+				28DD3AD42B7A647A00652D9F /* Rules.component */,
+				2892EE952B79BBD000CC97A3 /* diceTable.component */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		2892EE952B79BBD000CC97A3 /* diceTable.component */ = {
+			isa = PBXGroup;
+			children = (
+				28D6AC462B787A7C00721385 /* diceTable.swift */,
+				28D6AC452B787A5500721385 /* diceTable.subComponents */,
+			);
+			path = diceTable.component;
+			sourceTree = "<group>";
+		};
+		28D6AC0E2B7879CC00721385 = {
+			isa = PBXGroup;
+			children = (
+				28D6AC192B7879CC00721385 /* Henry'sJoy */,
+				28D6AC2B2B7879CE00721385 /* Henry'sJoyTests */,
+				28D6AC352B7879CE00721385 /* Henry'sJoyUITests */,
+				28D6AC182B7879CC00721385 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		28D6AC182B7879CC00721385 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28D6AC172B7879CC00721385 /* Henry'sJoy.app */,
+				28D6AC282B7879CE00721385 /* Henry'sJoyTests.xctest */,
+				28D6AC322B7879CE00721385 /* Henry'sJoyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28D6AC192B7879CC00721385 /* Henry'sJoy */ = {
+			isa = PBXGroup;
+			children = (
+				28DD3AD62B7A64AD00652D9F /* scripts */,
+				2892EE942B79BB8300CC97A3 /* screens */,
+				2892EE8D2B798E0A00CC97A3 /* Henry-sJoy-Info.plist */,
+				2892EE882B798B2600CC97A3 /* assets */,
+				28D6AC1A2B7879CC00721385 /* Henry_sJoyApp.swift */,
+				28D6AC1C2B7879CC00721385 /* FarkleGame.swift */,
+				28D6AC1E2B7879CE00721385 /* Assets.xcassets */,
+				28D6AC202B7879CE00721385 /* Henry_sJoy.entitlements */,
+				28D6AC212B7879CE00721385 /* Preview Content */,
+			);
+			path = "Henry'sJoy";
+			sourceTree = "<group>";
+		};
+		28D6AC212B7879CE00721385 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				28D6AC222B7879CE00721385 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		28D6AC2B2B7879CE00721385 /* Henry'sJoyTests */ = {
+			isa = PBXGroup;
+			children = (
+				28D6AC2C2B7879CE00721385 /* Henry_sJoyTests.swift */,
+			);
+			path = "Henry'sJoyTests";
+			sourceTree = "<group>";
+		};
+		28D6AC352B7879CE00721385 /* Henry'sJoyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				28D6AC362B7879CE00721385 /* Henry_sJoyUITests.swift */,
+				28D6AC382B7879CE00721385 /* Henry_sJoyUITestsLaunchTests.swift */,
+			);
+			path = "Henry'sJoyUITests";
+			sourceTree = "<group>";
+		};
+		28D6AC452B787A5500721385 /* diceTable.subComponents */ = {
+			isa = PBXGroup;
+			children = (
+				28D6AC482B787AA800721385 /* HenryZone.swift */,
+				28D6AC4C2B787B4F00721385 /* GamblerZone.swift */,
+			);
+			path = diceTable.subComponents;
+			sourceTree = "<group>";
+		};
+		28DD3AD42B7A647A00652D9F /* Rules.component */ = {
+			isa = PBXGroup;
+			children = (
+				2892EE922B79A61000CC97A3 /* Rules.swift */,
+			);
+			path = Rules.component;
+			sourceTree = "<group>";
+		};
+		28DD3AD52B7A648A00652D9F /* About.component */ = {
+			isa = PBXGroup;
+			children = (
+				2892EE962B79C89900CC97A3 /* About.swift */,
+			);
+			path = About.component;
+			sourceTree = "<group>";
+		};
+		28DD3AD62B7A64AD00652D9F /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				28D6AC4A2B787B3B00721385 /* CoreGameComponent.swift */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28D6AC162B7879CC00721385 /* Henry'sJoy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28D6AC3C2B7879CE00721385 /* Build configuration list for PBXNativeTarget "Henry'sJoy" */;
+			buildPhases = (
+				28D6AC132B7879CC00721385 /* Sources */,
+				28D6AC142B7879CC00721385 /* Frameworks */,
+				28D6AC152B7879CC00721385 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Henry'sJoy";
+			productName = "Henry'sJoy";
+			productReference = 28D6AC172B7879CC00721385 /* Henry'sJoy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		28D6AC272B7879CE00721385 /* Henry'sJoyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28D6AC3F2B7879CE00721385 /* Build configuration list for PBXNativeTarget "Henry'sJoyTests" */;
+			buildPhases = (
+				28D6AC242B7879CE00721385 /* Sources */,
+				28D6AC252B7879CE00721385 /* Frameworks */,
+				28D6AC262B7879CE00721385 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28D6AC2A2B7879CE00721385 /* PBXTargetDependency */,
+			);
+			name = "Henry'sJoyTests";
+			productName = "Henry'sJoyTests";
+			productReference = 28D6AC282B7879CE00721385 /* Henry'sJoyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		28D6AC312B7879CE00721385 /* Henry'sJoyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28D6AC422B7879CE00721385 /* Build configuration list for PBXNativeTarget "Henry'sJoyUITests" */;
+			buildPhases = (
+				28D6AC2E2B7879CE00721385 /* Sources */,
+				28D6AC2F2B7879CE00721385 /* Frameworks */,
+				28D6AC302B7879CE00721385 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28D6AC342B7879CE00721385 /* PBXTargetDependency */,
+			);
+			name = "Henry'sJoyUITests";
+			productName = "Henry'sJoyUITests";
+			productReference = 28D6AC322B7879CE00721385 /* Henry'sJoyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28D6AC0F2B7879CC00721385 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					28D6AC162B7879CC00721385 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					28D6AC272B7879CE00721385 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 28D6AC162B7879CC00721385;
+					};
+					28D6AC312B7879CE00721385 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 28D6AC162B7879CC00721385;
+					};
+				};
+			};
+			buildConfigurationList = 28D6AC122B7879CC00721385 /* Build configuration list for PBXProject "Henry'sJoy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28D6AC0E2B7879CC00721385;
+			productRefGroup = 28D6AC182B7879CC00721385 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28D6AC162B7879CC00721385 /* Henry'sJoy */,
+				28D6AC272B7879CE00721385 /* Henry'sJoyTests */,
+				28D6AC312B7879CE00721385 /* Henry'sJoyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28D6AC152B7879CC00721385 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28DD3AD32B7A55B500652D9F /* images in Resources */,
+				28DD3AD02B7A559400652D9F /* fonts in Resources */,
+				28D6AC232B7879CE00721385 /* Preview Assets.xcassets in Resources */,
+				28D6AC1F2B7879CE00721385 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28D6AC262B7879CE00721385 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28D6AC302B7879CE00721385 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28D6AC132B7879CC00721385 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28D6AC492B787AA800721385 /* HenryZone.swift in Sources */,
+				2892EE972B79C89900CC97A3 /* About.swift in Sources */,
+				28D6AC1D2B7879CC00721385 /* FarkleGame.swift in Sources */,
+				28D6AC4D2B787B4F00721385 /* GamblerZone.swift in Sources */,
+				28D6AC4B2B787B3B00721385 /* CoreGameComponent.swift in Sources */,
+				28D6AC1B2B7879CC00721385 /* Henry_sJoyApp.swift in Sources */,
+				2892EE932B79A61000CC97A3 /* Rules.swift in Sources */,
+				28D6AC472B787A7C00721385 /* diceTable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28D6AC242B7879CE00721385 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28D6AC2D2B7879CE00721385 /* Henry_sJoyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28D6AC2E2B7879CE00721385 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28D6AC392B7879CE00721385 /* Henry_sJoyUITestsLaunchTests.swift in Sources */,
+				28D6AC372B7879CE00721385 /* Henry_sJoyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28D6AC2A2B7879CE00721385 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28D6AC162B7879CC00721385 /* Henry'sJoy */;
+			targetProxy = 28D6AC292B7879CE00721385 /* PBXContainerItemProxy */;
+		};
+		28D6AC342B7879CE00721385 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28D6AC162B7879CC00721385 /* Henry'sJoy */;
+			targetProxy = 28D6AC332B7879CE00721385 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		28D6AC3A2B7879CE00721385 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		28D6AC3B2B7879CE00721385 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		28D6AC3D2B7879CE00721385 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Henry'sJoy/Henry_sJoy.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Henry'sJoy/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Henry-sJoy-Info.plist";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "L.A.Caelius.Henry-sJoy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		28D6AC3E2B7879CE00721385 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Henry'sJoy/Henry_sJoy.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Henry'sJoy/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Henry-sJoy-Info.plist";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "L.A.Caelius.Henry-sJoy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		28D6AC402B7879CE00721385 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "L.A.Caelius.Henry-sJoyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Henry'sJoy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Henry'sJoy";
+			};
+			name = Debug;
+		};
+		28D6AC412B7879CE00721385 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "L.A.Caelius.Henry-sJoyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Henry'sJoy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Henry'sJoy";
+			};
+			name = Release;
+		};
+		28D6AC432B7879CE00721385 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "L.A.Caelius.Henry-sJoyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Henry'sJoy";
+			};
+			name = Debug;
+		};
+		28D6AC442B7879CE00721385 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "L.A.Caelius.Henry-sJoyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Henry'sJoy";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28D6AC122B7879CC00721385 /* Build configuration list for PBXProject "Henry'sJoy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28D6AC3A2B7879CE00721385 /* Debug */,
+				28D6AC3B2B7879CE00721385 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28D6AC3C2B7879CE00721385 /* Build configuration list for PBXNativeTarget "Henry'sJoy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28D6AC3D2B7879CE00721385 /* Debug */,
+				28D6AC3E2B7879CE00721385 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28D6AC3F2B7879CE00721385 /* Build configuration list for PBXNativeTarget "Henry'sJoyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28D6AC402B7879CE00721385 /* Debug */,
+				28D6AC412B7879CE00721385 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28D6AC422B7879CE00721385 /* Build configuration list for PBXNativeTarget "Henry'sJoyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28D6AC432B7879CE00721385 /* Debug */,
+				28D6AC442B7879CE00721385 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28D6AC0F2B7879CC00721385 /* Project object */;
+}
