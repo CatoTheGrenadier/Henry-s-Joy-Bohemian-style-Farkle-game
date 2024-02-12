@@ -55,6 +55,7 @@ class CoreGameComponent: ObservableObject {
         p.stackedScore = 0
         p.num_chosen = 0
         p.num_tempChosen = 0
+        p.difficulty = 14 - p.difficultyInit
         round += 1
         updateDisplayRound()
     }
