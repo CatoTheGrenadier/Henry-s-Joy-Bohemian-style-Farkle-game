@@ -70,6 +70,10 @@ struct About: View {
                 Button(action:{
                     showGreetAlert.toggle()
                 }){
+                    Text("||")
+                        .foregroundColor(Color.black)
+                        .font(Font.custom("Maximilian", size: 30))
+                        .multilineTextAlignment(.leading)
                     HStack(spacing:0){
                         Text("W")
                             .foregroundColor(Color.red)
@@ -113,12 +117,17 @@ struct About: View {
                     .alert(isPresented: $showGreetAlert){
                         Alert(title: Text("Thank you!"), message: Text("Good day to you too!"), dismissButton: .default(Text("God Bless You!")))
                     }
+                    
+                    Text("||")
+                        .foregroundColor(Color.black)
+                        .font(Font.custom("Maximilian", size: 30))
+                        .multilineTextAlignment(.leading)
                 }
                 
             }
             .padding()
             
-            Button("Back to Main Screen"){
+            Button("||  Back to Main Screen  ||"){
                 coreComponents.state = 0
                 presentationMode.wrappedValue.dismiss()
             }

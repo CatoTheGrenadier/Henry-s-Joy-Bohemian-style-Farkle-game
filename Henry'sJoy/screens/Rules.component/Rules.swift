@@ -129,7 +129,7 @@ struct Rules: View {
                  }
             }
             .padding(15)
-            Button("Back to Main Screen"){
+            Button("||  Back to Main Screen  ||"){
                 coreComponents.state = 0
                 presentationMode.wrappedValue.dismiss()
             }

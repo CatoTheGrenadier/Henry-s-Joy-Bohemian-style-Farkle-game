@@ -40,10 +40,17 @@ struct diceTable: View {
                         .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                         .foregroundColor(Color.red)
                         .padding()
+                    
+                    Text("||")
+                        .font(Font.custom("Maximilian", size: 20))
                     Button("Start Over"){
                         coreComponents.newGame()
                     }
-                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                    .foregroundColor(Color.black)
+                    .font(Font.custom("Maximilian", size: 20))
+                    Text("||")
+                        .font(Font.custom("Maximilian", size: 20))
+                    
                 }else{
                     VStack(spacing:0){
                         HStack(spacing:0){
