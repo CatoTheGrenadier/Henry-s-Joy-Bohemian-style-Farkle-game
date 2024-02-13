@@ -23,7 +23,6 @@ struct diceTable: View {
                 }
                 .foregroundColor(Color.black)
                 .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
-                .padding(5)
             }else{
                 
                 if (coreComponents.Henry.currentScore >= coreComponents.scoreToVictory){
@@ -55,26 +54,18 @@ struct diceTable: View {
                     VStack(spacing:0){
                         HStack(spacing:0){
                             Text("||")
-                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
                             
                             Button(action:{
                                 showAlert.toggle()
                             }){
-                                Text(" N")
+                                Text("M")
                                     .foregroundColor(Color.red)
-                                    .font(Font.custom("Maximilian", size: 20))
+                                    .font(Font.custom("Maximilian", size: 30))
                                 +
-                                Text("ew  ")
+                                Text("enu")
                                     .foregroundColor(Color.black)
-                                    .font(Font.custom("Maximilian", size: 20))
-                                +
-                                Text("G")
-                                    .foregroundColor(Color.red)
-                                    .font(Font.custom("Maximilian", size: 20))
-                                +
-                                Text("ame")
-                                    .foregroundColor(Color.black)
-                                    .font(Font.custom("Maximilian", size: 20))
+                                    .font(Font.custom("Maximilian", size: 30))
                             }
                             .alert(isPresented: $showAlert){
                                 Alert(title: Text("Start Over"),
@@ -89,18 +80,18 @@ struct diceTable: View {
                             .padding()
                             
                             Text("||")
-                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
                             
                             Button(action:{
                                 showAlertRules.toggle()
                             }){
                                 Text("R")
                                     .foregroundColor(Color.red)
-                                    .font(Font.custom("Maximilian", size: 20))
+                                    .font(Font.custom("Maximilian", size: 30))
                                 +
                                 Text("ules   ")
                                     .foregroundColor(Color.black)
-                                    .font(Font.custom("Maximilian", size: 20))
+                                    .font(Font.custom("Maximilian", size: 30))
                             }
                             .alert(isPresented: $showAlertRules){
                                 Alert(title: Text("Rules"),
@@ -115,18 +106,18 @@ struct diceTable: View {
                             }
                             
                             Text("||")
-                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
                             
                             Button(action:{
                                 showAlertAbout.toggle()
                             }){
                                 Text("A")
                                     .foregroundColor(Color.red)
-                                    .font(Font.custom("Maximilian", size: 20))
+                                    .font(Font.custom("Maximilian", size: 30))
                                 +
                                 Text("bout    ")
                                     .foregroundColor(Color.black)
-                                    .font(Font.custom("Maximilian", size: 20))
+                                    .font(Font.custom("Maximilian", size: 30))
                             }
                             .alert(isPresented: $showAlertAbout){
                                 Alert(title: Text("About"),
@@ -141,8 +132,9 @@ struct diceTable: View {
                             }
                             
                             Text("||")
-                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
                         }
+                        .padding(.vertical)
                         
                         let difficulty = coreComponents.Gambler.difficultyMap[14 - coreComponents.Gambler.difficultyInit] ?? "default"
                         
@@ -167,6 +159,7 @@ struct diceTable: View {
                                 .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                         }        
                         .padding(.horizontal, 45)
+                        .padding(.vertical)
                     }
                     Text("Round \(coreComponents.displayRound)")
                             .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))

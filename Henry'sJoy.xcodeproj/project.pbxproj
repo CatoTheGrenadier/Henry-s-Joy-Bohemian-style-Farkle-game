@@ -36,6 +36,7 @@
 		2881B4C12B7AB7FA00039F99 /* photo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2881B4C02B7AB7FA00039F99 /* photo.jpeg */; };
 		2892EE932B79A61000CC97A3 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2892EE922B79A61000CC97A3 /* Rules.swift */; };
 		2892EE972B79C89900CC97A3 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2892EE962B79C89900CC97A3 /* About.swift */; };
+		28C5CFDC2B7B2877003AF3A4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 28C5CFDB2B7B2877003AF3A4 /* logo.png */; };
 		28D6AC1B2B7879CC00721385 /* Henry_sJoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC1A2B7879CC00721385 /* Henry_sJoyApp.swift */; };
 		28D6AC1D2B7879CC00721385 /* FarkleGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6AC1C2B7879CC00721385 /* FarkleGame.swift */; };
 		28D6AC1F2B7879CE00721385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D6AC1E2B7879CE00721385 /* Assets.xcassets */; };
@@ -97,6 +98,7 @@
 		2892EE8D2B798E0A00CC97A3 /* Henry-sJoy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Henry-sJoy-Info.plist"; sourceTree = SOURCE_ROOT; };
 		2892EE922B79A61000CC97A3 /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
 		2892EE962B79C89900CC97A3 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		28C5CFDB2B7B2877003AF3A4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		28D6AC172B7879CC00721385 /* Henry'sJoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Henry'sJoy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D6AC1A2B7879CC00721385 /* Henry_sJoyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Henry_sJoyApp.swift; sourceTree = "<group>"; };
 		28D6AC1C2B7879CC00721385 /* FarkleGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarkleGame.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		2881B4852B7AB58100039F99 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				28C5CFDA2B7B2877003AF3A4 /* logo.imageset */,
 				2881B4862B7AB58100039F99 /* Roll.imageset */,
 				2881B48A2B7AB58100039F99 /* Dice1.imageset */,
 				2881B48E2B7AB58100039F99 /* Cover.imageset */,
@@ -286,6 +289,14 @@
 				28D6AC452B787A5500721385 /* diceTable.subComponents */,
 			);
 			path = diceTable.component;
+			sourceTree = "<group>";
+		};
+		28C5CFDA2B7B2877003AF3A4 /* logo.imageset */ = {
+			isa = PBXGroup;
+			children = (
+				28C5CFDB2B7B2877003AF3A4 /* logo.png */,
+			);
+			path = logo.imageset;
 			sourceTree = "<group>";
 		};
 		28D6AC0E2B7879CC00721385 = {
@@ -512,6 +523,7 @@
 				2881B4B02B7AB58100039F99 /* Dice6@2x.png in Resources */,
 				2881B4BD2B7AB58100039F99 /* Dice5@3x.png in Resources */,
 				2881B4B82B7AB58100039F99 /* Dice2@2x.png in Resources */,
+				28C5CFDC2B7B2877003AF3A4 /* logo.png in Resources */,
 				2881B4B62B7AB58100039F99 /* Dice2@3x.png in Resources */,
 				2881B4AB2B7AB58100039F99 /* Dice1@2x.png in Resources */,
 				2881B4B32B7AB58100039F99 /* Dice3@3x.png in Resources */,
