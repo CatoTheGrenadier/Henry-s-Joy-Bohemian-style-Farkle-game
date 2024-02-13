@@ -16,10 +16,10 @@ class CoreGameComponent: ObservableObject {
     @Published var Henry: Player
     @Published var Gambler: Player
     @Published var state = 0
-    @Published var displayRound = 0
+    @Published var displayRound = 1
     
     init(){
-        round = 0
+        round = 1
         turn = 0
         scoreToVictory = 4000
         diceMap = [1:"⚀", 2:"⚁", 3:"⚂", 4:"⚃", 5: "⚄", 6:"⚅"]

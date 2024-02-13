@@ -11,6 +11,7 @@ struct HenryZone: View {
     @ObservedObject var coreComponents: CoreGameComponent
     @State private var dummy: Bool = false
     @State private var isProcessing: Bool = false
+    @State private var showAlertRoll = false
 
     
     var body: some View {
@@ -113,8 +114,7 @@ struct HenryZone: View {
                 
                 if (coreComponents.Henry.turn == 0){
                     Button(action:{
-                        coreComponents.rollDice(p: coreComponents.Henry)
-                        dummy.toggle()
+                        showAlertRoll.toggle()
                     }){
                         HStack{
                             Text("|| ")
@@ -143,6 +143,16 @@ struct HenryZone: View {
                                 .foregroundColor(Color.black)
                                 .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
                         }
+                    }
+                    .alert(isPresented: $showAlertRoll){
+                        Alert(title: Text("ScoreBoard"),
+                              message: Text("Do you want to throw now?"),
+                              primaryButton: .default(Text("Roll!")){
+                            coreComponents.rollDice(p: coreComponents.Henry)
+                            dummy.toggle()
+                        },
+                              secondaryButton: .cancel(Text("Wait!"))
+                        )
                     }
                     .padding(10)
                 }else{

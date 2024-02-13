@@ -65,6 +65,7 @@ struct About: View {
                     Image("photo")
                         .resizable()
                         .padding()
+                        .frame(width: 50,height: 50)
                 }
                 
                 Button(action:{
@@ -123,57 +124,7 @@ struct About: View {
                         .font(Font.custom("Maximilian", size: 30))
                         .multilineTextAlignment(.leading)
                 }
-                
             }
-            .padding()
-            
-            Button(action:{
-                coreComponents.state = 0
-                presentationMode.wrappedValue.dismiss()
-            }){
-                Text("|| ")
-                    .foregroundColor(Color.black)
-                    .font(Font.custom("1529 Champ Fleury W01 Regular",size:35))
-                
-                HStack(spacing:0){
-                    Text("B")
-                        .foregroundColor(Color.red)
-                        .font(Font.custom("Maximilian",size:35))
-                    +
-                    Text("ack ")
-                        .foregroundColor(Color.black)
-                        .font(Font.custom("Maximilian",size:35))
-                    
-                    Text("T")
-                        .foregroundColor(Color.red)
-                        .font(Font.custom("Maximilian",size:35))
-                    +
-                    Text("o ")
-                        .foregroundColor(Color.black)
-                        .font(Font.custom("Maximilian",size:35))
-                    
-                    Text("M")
-                        .foregroundColor(Color.red)
-                        .font(Font.custom("Maximilian",size:35))
-                    +
-                    Text("ain ")
-                        .foregroundColor(Color.black)
-                        .font(Font.custom("Maximilian",size:35))
-                    
-                    Text("S")
-                        .foregroundColor(Color.red)
-                        .font(Font.custom("Maximilian",size:35))
-                    +
-                    Text("creen")
-                        .foregroundColor(Color.black)
-                        .font(Font.custom("Maximilian",size:35))
-                }
-                
-                Text(" ||")
-                    .foregroundColor(Color.black)
-                    .font(Font.custom("1529 Champ Fleury W01 Regular",size:35))
-            }
-
         }
     }
 }

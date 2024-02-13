@@ -12,89 +12,63 @@ struct farkleGame: View {
     @State private var dummy: Bool = false
     
     var body: some View {
-        ZStack{
-            Image("Cover")
-                .resizable()
-                .edgesIgnoringSafeArea(.all)
-            if coreComponents.state == 0{
+        NavigationView{
+            ZStack{
+                Image("Cover")
+                    .resizable()
+                    .edgesIgnoringSafeArea(.all)
                 ScrollView{
                     VStack {
-                        if coreComponents.round != 0{
-                            VStack(spacing:0){
-                                Text("F")
-                                    .foregroundColor(Color.red)
-                                    .font(Font.custom("Maximilian", size: 56))
-                                +
-                                Text("arkler of ")
-                                    .foregroundColor(Color.black)
-                                    .font(Font.custom("Maximilian", size: 36))
-                                +
-                                Text("S")
-                                    .foregroundColor(Color.red)
-                                    .font(Font.custom("Maximilian", size: 56))
-                                +
-                                Text("asau")
-                                    .foregroundColor(Color.black)
-                                        .font(Font.custom("Maximilian", size: 36))
-                                ScrollView{
-                                    diceTable(coreComponents: coreComponents)
-                                }
-                            }
-                        }else{
-                            VStack(){
-                                Spacer()
-                                    .padding(30)
-                                Image("logo")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 250, height: 250)
-                                Text("F")
-                                    .foregroundColor(Color.red)
-                                    .font(Font.custom("Maximilian", size: 56))
-                                +
-                                Text("arkler of ")
-                                    .foregroundColor(Color.black)
-                                    .font(Font.custom("Maximilian", size: 36))
-                                +
-                                Text("S")
-                                    .foregroundColor(Color.red)
-                                    .font(Font.custom("Maximilian", size: 56))
-                                +
-                                Text("asau")
-                                    .foregroundColor(Color.black)
-                                    .font(Font.custom("Maximilian", size: 36))
-                                    
-                                diceTable(coreComponents: coreComponents)
-                            }
+                        VStack{
+                            Spacer()
+                                .padding()
+                            Image("logo")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 250, height: 250)
+                            Text("F")
+                                .foregroundColor(Color.red)
+                                .font(Font.custom("Maximilian", size: 56))
+                            +
+                            Text("arkler of ")
+                                .foregroundColor(Color.black)
+                                .font(Font.custom("Maximilian", size: 36))
+                            +
+                            Text("S")
+                                .foregroundColor(Color.red)
+                                .font(Font.custom("Maximilian", size: 56))
+                            +
+                            Text("asau")
+                                .foregroundColor(Color.black)
+                                .font(Font.custom("Maximilian", size: 36))
                         }
-                        if coreComponents.round == 0{
-                            Button("||  Rules  ||"){
-                                coreComponents.state = 1
-                                dummy.toggle()
-                            }
-                            .padding(10)
-                            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
-                            .foregroundColor(Color.black)
-                                
-                            Button("||  About  ||"){
-                                coreComponents.state = 2
-                                dummy.toggle()
-                            }
-                            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
-                            .foregroundColor(Color.black)
+                        .padding()
+                        
+                        NavigationLink(destination:GameView(coreComponents: coreComponents)){
+                            Text("||  PLAY  ||")
+                                .foregroundColor(Color.black)
+                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
                         }
-                    }
-                }
-            }else{
-                VStack {
-                    if coreComponents.state == 1{
-                        Rules(coreComponents: coreComponents)
-                    }else{
-                        About(coreComponents: coreComponents)
+                        .padding()
+                        
+                        NavigationLink(destination:RulesView(coreComponents: coreComponents)){
+                            Text("||  Rules  ||")
+                                .foregroundColor(Color.black)
+                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
+                        }
+                        .padding()
+                        
+                        NavigationLink(destination:AboutView(coreComponents: coreComponents)){
+                            Text("||  About  ||")
+                                .foregroundColor(Color.black)
+                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
+                        }
                     }
                 }
             }
         }
+        .navigationBarItems(leading: CustomButtonBack())
+        .navigationBarTitle("Custom Back Button", displayMode: .inline)
     }
 }
 
