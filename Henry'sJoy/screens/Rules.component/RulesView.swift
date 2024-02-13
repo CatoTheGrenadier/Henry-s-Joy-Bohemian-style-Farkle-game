@@ -12,15 +12,19 @@ struct RulesView: View{
     @ObservedObject var coreComponents : CoreGameComponent
     
     var body: some View{
-        ZStack{
-            Image("Cover")
-                .resizable()
-                .edgesIgnoringSafeArea(.all)
-            VStack{
-                Rules(coreComponents: coreComponents)
-                    .padding(.horizontal)
+        NavigationView{
+            ZStack{
+                Image("Cover")
+                    .resizable()
+                    .edgesIgnoringSafeArea(.all)
+                VStack{
+                    Rules(coreComponents: coreComponents)
+                        .padding(.horizontal)
+                }
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: CustomBackButton())
     }
 }
 

@@ -18,24 +18,40 @@ struct About: View {
     var body: some View {
         VStack{
             ScrollView{
+                
                 VStack{
-                    HStack(spacing:0){
-                        Text("A")
-                            .foregroundColor(Color.red)
-                            .font(Font.custom("Maximilian", size: 70))
-                            .multilineTextAlignment(.leading)
-                        Text("bout ")
-                            .font(Font.custom("Maximilian", size: 40))
-                            .multilineTextAlignment(.leading)
-                        Text("M")
-                            .foregroundColor(Color.red)
-                            .font(Font.custom("Maximilian", size: 70))
-                            .multilineTextAlignment(.leading)
-                        Text("yself")
-                            .font(Font.custom("Maximilian", size: 40))
-                            .multilineTextAlignment(.leading)
+                    HStack{
+                        VStack(spacing:0){
+                            HStack(spacing:0){
+                                Text("A")
+                                    .foregroundColor(Color.red)
+                                    .font(Font.custom("Maximilian", size: 70))
+                                    .multilineTextAlignment(.leading)
+                                Text("bout ")
+                                    .font(Font.custom("Maximilian", size: 40))
+                                    .multilineTextAlignment(.leading)
+                            }
+                            
+                            HStack(spacing:0){
+                                Text("M")
+                                    .foregroundColor(Color.red)
+                                    .font(Font.custom("Maximilian", size: 70))
+                                    .multilineTextAlignment(.leading)
+                                Text("yself")
+                                    .font(Font.custom("Maximilian", size: 40))
+                                    .multilineTextAlignment(.leading)
+                            }
+                            .padding(1)
+                        }
+
+                        VStack{
+                            Image("photo")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 200,height: 200)
+                                .cornerRadius(50)
+                        }
                     }
-                    .padding(1)
                 }
                 
                 VStack{
@@ -61,12 +77,6 @@ struct About: View {
                 }
                 .multilineTextAlignment(.leading)
                 
-                VStack{
-                    Image("photo")
-                        .resizable()
-                        .padding()
-                        .frame(width: 50,height: 50)
-                }
                 
                 Button(action:{
                     showGreetAlert.toggle()

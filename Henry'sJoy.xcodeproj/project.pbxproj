@@ -38,7 +38,7 @@
 		2889C95C2B7BF7AF0017848B /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2889C95B2B7BF7AF0017848B /* GameView.swift */; };
 		2889C95E2B7BFCAC0017848B /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2889C95D2B7BFCAC0017848B /* RulesView.swift */; };
 		2889C9602B7C012A0017848B /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2889C95F2B7C012A0017848B /* AboutView.swift */; };
-		2889C9662B7C0F520017848B /* CustomButtonBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2889C9652B7C0F520017848B /* CustomButtonBack.swift */; };
+		2889C96A2B7C1B350017848B /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2889C9692B7C1B350017848B /* CustomBackButton.swift */; };
 		2892EE932B79A61000CC97A3 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2892EE922B79A61000CC97A3 /* Rules.swift */; };
 		2892EE972B79C89900CC97A3 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2892EE962B79C89900CC97A3 /* About.swift */; };
 		28C5CFDC2B7B2877003AF3A4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 28C5CFDB2B7B2877003AF3A4 /* logo.png */; };
@@ -104,7 +104,7 @@
 		2889C95B2B7BF7AF0017848B /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		2889C95D2B7BFCAC0017848B /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
 		2889C95F2B7C012A0017848B /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
-		2889C9652B7C0F520017848B /* CustomButtonBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonBack.swift; sourceTree = "<group>"; };
+		2889C9692B7C1B350017848B /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
 		2892EE8D2B798E0A00CC97A3 /* Henry-sJoy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Henry-sJoy-Info.plist"; sourceTree = SOURCE_ROOT; };
 		2892EE922B79A61000CC97A3 /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
 		2892EE962B79C89900CC97A3 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
@@ -282,12 +282,12 @@
 			path = Dice5.imageset;
 			sourceTree = "<group>";
 		};
-		2889C9642B7C0F3D0017848B /* utils */ = {
+		2889C9672B7C1B120017848B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				2889C9652B7C0F520017848B /* CustomButtonBack.swift */,
+				2889C9692B7C1B350017848B /* CustomBackButton.swift */,
 			);
-			path = utils;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		2892EE882B798B2600CC97A3 /* assets */ = {
@@ -349,7 +349,7 @@
 		28D6AC192B7879CC00721385 /* Henry'sJoy */ = {
 			isa = PBXGroup;
 			children = (
-				2889C9642B7C0F3D0017848B /* utils */,
+				2889C9672B7C1B120017848B /* Utils */,
 				28DD3AD62B7A64AD00652D9F /* scripts */,
 				2892EE942B79BB8300CC97A3 /* screens */,
 				2892EE8D2B798E0A00CC97A3 /* Henry-sJoy-Info.plist */,
@@ -584,7 +584,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28D6AC492B787AA800721385 /* HenryZone.swift in Sources */,
-				2889C9662B7C0F520017848B /* CustomButtonBack.swift in Sources */,
 				2892EE972B79C89900CC97A3 /* About.swift in Sources */,
 				2889C9602B7C012A0017848B /* AboutView.swift in Sources */,
 				28D6AC1D2B7879CC00721385 /* FarkleGame.swift in Sources */,
@@ -593,6 +592,7 @@
 				28D6AC4B2B787B3B00721385 /* CoreGameComponent.swift in Sources */,
 				2889C95E2B7BFCAC0017848B /* RulesView.swift in Sources */,
 				28D6AC1B2B7879CC00721385 /* Henry_sJoyApp.swift in Sources */,
+				2889C96A2B7C1B350017848B /* CustomBackButton.swift in Sources */,
 				2892EE932B79A61000CC97A3 /* Rules.swift in Sources */,
 				28D6AC472B787A7C00721385 /* diceTable.swift in Sources */,
 			);

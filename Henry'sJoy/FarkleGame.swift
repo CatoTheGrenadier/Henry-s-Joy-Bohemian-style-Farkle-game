@@ -67,8 +67,6 @@ struct farkleGame: View {
                 }
             }
         }
-        .navigationBarItems(leading: CustomButtonBack())
-        .navigationBarTitle("Custom Back Button", displayMode: .inline)
     }
 }
 

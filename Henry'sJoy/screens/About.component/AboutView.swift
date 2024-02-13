@@ -20,6 +20,8 @@ struct AboutView: View{
                 About(coreComponents: coreComponents)
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: CustomBackButton())
     }
 }
 
