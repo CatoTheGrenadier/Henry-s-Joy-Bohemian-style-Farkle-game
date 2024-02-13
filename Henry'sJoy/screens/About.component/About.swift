@@ -127,12 +127,53 @@ struct About: View {
             }
             .padding()
             
-            Button("||  Back to Main Screen  ||"){
+            Button(action:{
                 coreComponents.state = 0
                 presentationMode.wrappedValue.dismiss()
+            }){
+                Text("|| ")
+                    .foregroundColor(Color.black)
+                    .font(Font.custom("1529 Champ Fleury W01 Regular",size:35))
+                
+                HStack(spacing:0){
+                    Text("B")
+                        .foregroundColor(Color.red)
+                        .font(Font.custom("Maximilian",size:35))
+                    +
+                    Text("ack ")
+                        .foregroundColor(Color.black)
+                        .font(Font.custom("Maximilian",size:35))
+                    
+                    Text("T")
+                        .foregroundColor(Color.red)
+                        .font(Font.custom("Maximilian",size:35))
+                    +
+                    Text("o ")
+                        .foregroundColor(Color.black)
+                        .font(Font.custom("Maximilian",size:35))
+                    
+                    Text("M")
+                        .foregroundColor(Color.red)
+                        .font(Font.custom("Maximilian",size:35))
+                    +
+                    Text("ain ")
+                        .foregroundColor(Color.black)
+                        .font(Font.custom("Maximilian",size:35))
+                    
+                    Text("S")
+                        .foregroundColor(Color.red)
+                        .font(Font.custom("Maximilian",size:35))
+                    +
+                    Text("creen")
+                        .foregroundColor(Color.black)
+                        .font(Font.custom("Maximilian",size:35))
+                }
+                
+                Text(" ||")
+                    .foregroundColor(Color.black)
+                    .font(Font.custom("1529 Champ Fleury W01 Regular",size:35))
             }
-            .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
-            .foregroundColor(Color.black)
+
         }
     }
 }

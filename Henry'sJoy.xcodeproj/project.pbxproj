@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28567A0D2B7BDC7200C41E6C /* appicon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 28567A0C2B7BDC7200C41E6C /* appicon.jpeg */; };
 		2881B4822B7AB57800039F99 /* MaximilianZierbuchstaben.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2881B47F2B7AB57800039F99 /* MaximilianZierbuchstaben.ttf */; };
 		2881B4832B7AB57800039F99 /* 1529 Champ Fleury W01 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2881B4802B7AB57800039F99 /* 1529 Champ Fleury W01 Regular.ttf */; };
 		2881B4842B7AB57800039F99 /* Maximilian.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2881B4812B7AB57800039F99 /* Maximilian.ttf */; };
@@ -68,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28567A0C2B7BDC7200C41E6C /* appicon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = appicon.jpeg; sourceTree = "<group>"; };
 		2881B47F2B7AB57800039F99 /* MaximilianZierbuchstaben.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaximilianZierbuchstaben.ttf; sourceTree = "<group>"; };
 		2881B4802B7AB57800039F99 /* 1529 Champ Fleury W01 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1529 Champ Fleury W01 Regular.ttf"; sourceTree = "<group>"; };
 		2881B4812B7AB57800039F99 /* Maximilian.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Maximilian.ttf; sourceTree = "<group>"; };
@@ -141,6 +143,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28567A0B2B7BDB8800C41E6C /* appicon.imageset */ = {
+			isa = PBXGroup;
+			children = (
+				28567A0C2B7BDC7200C41E6C /* appicon.jpeg */,
+			);
+			path = appicon.imageset;
+			sourceTree = "<group>";
+		};
 		2881B47E2B7AB57800039F99 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +164,7 @@
 		2881B4852B7AB58100039F99 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				28567A0B2B7BDB8800C41E6C /* appicon.imageset */,
 				28C5CFDA2B7B2877003AF3A4 /* logo.imageset */,
 				2881B4862B7AB58100039F99 /* Roll.imageset */,
 				2881B48A2B7AB58100039F99 /* Dice1.imageset */,
@@ -502,6 +513,7 @@
 				2881B4BF2B7AB58100039F99 /* Dice5.png in Resources */,
 				2881B4AF2B7AB58100039F99 /* Dice6.png in Resources */,
 				28D6AC232B7879CE00721385 /* Preview Assets.xcassets in Resources */,
+				28567A0D2B7BDC7200C41E6C /* appicon.jpeg in Resources */,
 				2881B4822B7AB57800039F99 /* MaximilianZierbuchstaben.ttf in Resources */,
 				2881B4BA2B7AB58100039F99 /* Dice4.png in Resources */,
 				2881B4B22B7AB58100039F99 /* dicepic(1).png in Resources */,

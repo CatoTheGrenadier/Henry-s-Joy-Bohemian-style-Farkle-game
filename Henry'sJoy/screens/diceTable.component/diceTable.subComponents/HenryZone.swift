@@ -119,7 +119,7 @@ struct HenryZone: View {
                         HStack{
                             Text("|| ")
                                 .foregroundColor(Color.black)
-                                .font(Font.custom("Maximilian", size: 30))
+                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
                             
                             Image("Roll")
                             
@@ -141,8 +141,7 @@ struct HenryZone: View {
                             
                             Text(" ||")
                                 .foregroundColor(Color.black)
-                                .font(Font.custom("Maximilian", size: 30))
-                            
+                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
                         }
                     }
                     .padding(10)
@@ -153,7 +152,7 @@ struct HenryZone: View {
                         HStack{
                             Text("||")
                                 .foregroundColor(Color.black)
-                                .font(Font.custom("Maximilian", size: 30))
+                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
                             Button(action:{
                                 coreComponents.stackScore(p: coreComponents.Henry)
                                 coreComponents.rollDice(p: coreComponents.Henry)
@@ -182,7 +181,7 @@ struct HenryZone: View {
                             
                             Text("||")
                                 .foregroundColor(Color.black)
-                                .font(Font.custom("Maximilian", size: 30))
+                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
                             
                             Button(action:{
                                 coreComponents.stackScore(p: coreComponents.Henry)
@@ -203,7 +202,7 @@ struct HenryZone: View {
                             
                             Text("||")
                                 .foregroundColor(Color.black)
-                                .font(Font.custom("Maximilian", size: 30))
+                                .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
                         }
                     }else if (coreComponents.Henry.num_tempChosen < 1){
                         Text("You need to choose at least one dice!")
