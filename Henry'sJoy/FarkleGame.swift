@@ -42,6 +42,8 @@ struct farkleGame: View {
                             }
                         }else{
                             VStack(){
+                                Spacer()
+                                    .padding(30)
                                 Image("logo")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
