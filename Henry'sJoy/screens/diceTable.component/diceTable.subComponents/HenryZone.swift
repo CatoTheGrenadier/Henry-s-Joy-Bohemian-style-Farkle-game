@@ -261,11 +261,11 @@ struct HenryZone: View {
             if coreComponents.round % 2 == 1{
                 Text(coreComponents.Henry.name)
                     .foregroundColor(Color.red)
-                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                    .font(Font.custom("Maximilian", size: 40))
                     .padding(40)
             }else{
                 Text(coreComponents.Henry.name)
-                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                    .font(Font.custom("Maximilian", size: 25))
                     .padding(40)
             }
             VStack{

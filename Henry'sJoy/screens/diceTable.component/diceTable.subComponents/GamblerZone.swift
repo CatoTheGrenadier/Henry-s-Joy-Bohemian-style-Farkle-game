@@ -18,11 +18,11 @@ struct GamblerZone: View {
             if coreComponents.round % 2 == 0{
                 Text(coreComponents.Gambler.name)
                     .foregroundColor(Color.red)
-                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                    .font(Font.custom("Maximilian", size: 40))
                     .padding(20)
             }else{
                 Text(coreComponents.Gambler.name)
-                    .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
+                    .font(Font.custom("Maximilian", size: 25))
                     .padding(20)
             }
             VStack{
