@@ -145,7 +145,7 @@ struct HenryZone: View {
                         }
                     }
                     .alert(isPresented: $showAlertRoll){
-                        Alert(title: Text("ScoreBoard"),
+                        Alert(title: Text("Rubicon Time"),
                               message: Text("Do you want to throw now?"),
                               primaryButton: .default(Text("Roll!")){
                             coreComponents.rollDice(p: coreComponents.Henry)

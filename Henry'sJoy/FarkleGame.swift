@@ -67,6 +67,7 @@ struct farkleGame: View {
                 }
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

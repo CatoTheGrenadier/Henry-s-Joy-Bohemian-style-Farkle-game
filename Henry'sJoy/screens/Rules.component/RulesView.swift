@@ -12,8 +12,7 @@ struct RulesView: View{
     @ObservedObject var coreComponents : CoreGameComponent
     
     var body: some View{
-        NavigationView{
-            ZStack{
+        ZStack{
                 Image("Cover")
                     .resizable()
                     .edgesIgnoringSafeArea(.all)
@@ -21,8 +20,8 @@ struct RulesView: View{
                     Rules(coreComponents: coreComponents)
                         .padding(.horizontal)
                 }
-            }
         }
+        .onAppear{coreComponents.state = 2}
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: CustomBackButton())
     }

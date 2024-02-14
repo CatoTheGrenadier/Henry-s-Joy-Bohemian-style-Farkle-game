@@ -83,8 +83,9 @@ struct About: View {
                 }){
                     Text("||")
                         .foregroundColor(Color.black)
-                        .font(Font.custom("Maximilian", size: 30))
+                        .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
                         .multilineTextAlignment(.leading)
+                    
                     HStack(spacing:0){
                         Text("W")
                             .foregroundColor(Color.red)
@@ -131,7 +132,7 @@ struct About: View {
                     
                     Text("||")
                         .foregroundColor(Color.black)
-                        .font(Font.custom("Maximilian", size: 30))
+                        .font(Font.custom("1529 Champ Fleury W01 Regular", size: 30))
                         .multilineTextAlignment(.leading)
                 }
             }
