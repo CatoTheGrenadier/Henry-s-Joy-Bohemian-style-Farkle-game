@@ -21,7 +21,7 @@ struct About: View {
                 
                 VStack{
                     HStack{
-                        VStack(spacing:0){
+                        HStack(spacing:0){
                             HStack(spacing:0){
                                 Text("A")
                                     .foregroundColor(Color.red)
@@ -43,19 +43,11 @@ struct About: View {
                             }
                             .padding(1)
                         }
-
-                        VStack{
-                            Image("photo")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 200,height: 200)
-                                .cornerRadius(50)
-                        }
                     }
                 }
                 
                 VStack{
-                    Text("Hi! My name is Yi Ling, thank you for playing my game!")
+                    Text("Hi there! My name is Lin, thank you for playing my game!")
                         .font(Font.custom("1529 Champ Fleury W01 Regular", size: 20))
                         .multilineTextAlignment(.leading)
                         .padding()
