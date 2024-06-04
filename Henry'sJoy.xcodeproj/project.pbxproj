@@ -34,7 +34,6 @@
 		2881B4BD2B7AB58100039F99 /* Dice5@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2881B4A52B7AB58100039F99 /* Dice5@3x.png */; };
 		2881B4BE2B7AB58100039F99 /* Dice5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2881B4A62B7AB58100039F99 /* Dice5@2x.png */; };
 		2881B4BF2B7AB58100039F99 /* Dice5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2881B4A72B7AB58100039F99 /* Dice5.png */; };
-		2881B4C12B7AB7FA00039F99 /* photo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2881B4C02B7AB7FA00039F99 /* photo.jpeg */; };
 		2889C95C2B7BF7AF0017848B /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2889C95B2B7BF7AF0017848B /* GameView.swift */; };
 		2889C95E2B7BFCAC0017848B /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2889C95D2B7BFCAC0017848B /* RulesView.swift */; };
 		2889C9602B7C012A0017848B /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2889C95F2B7C012A0017848B /* AboutView.swift */; };
@@ -100,7 +99,6 @@
 		2881B4A52B7AB58100039F99 /* Dice5@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dice5@3x.png"; sourceTree = "<group>"; };
 		2881B4A62B7AB58100039F99 /* Dice5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dice5@2x.png"; sourceTree = "<group>"; };
 		2881B4A72B7AB58100039F99 /* Dice5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dice5.png; sourceTree = "<group>"; };
-		2881B4C02B7AB7FA00039F99 /* photo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo.jpeg; sourceTree = "<group>"; };
 		2889C95B2B7BF7AF0017848B /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		2889C95D2B7BFCAC0017848B /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
 		2889C95F2B7C012A0017848B /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -181,7 +179,6 @@
 				2881B4942B7AB58100039F99 /* AppIcon.appiconset */,
 				2881B4962B7AB58100039F99 /* Dice3.imageset */,
 				2881B49A2B7AB58100039F99 /* Dice2.imageset */,
-				2881B49E2B7AB58100039F99 /* photo.imageset */,
 				2881B4A02B7AB58100039F99 /* Dice4.imageset */,
 				2881B4A42B7AB58100039F99 /* Dice5.imageset */,
 			);
@@ -252,14 +249,6 @@
 				2881B49D2B7AB58100039F99 /* Dice2@2x.png */,
 			);
 			path = Dice2.imageset;
-			sourceTree = "<group>";
-		};
-		2881B49E2B7AB58100039F99 /* photo.imageset */ = {
-			isa = PBXGroup;
-			children = (
-				2881B4C02B7AB7FA00039F99 /* photo.jpeg */,
-			);
-			path = photo.imageset;
 			sourceTree = "<group>";
 		};
 		2881B4A02B7AB58100039F99 /* Dice4.imageset */ = {
@@ -541,7 +530,6 @@
 				2881B4AA2B7AB58100039F99 /* Roll.png in Resources */,
 				2881B4B72B7AB58100039F99 /* Dice2.png in Resources */,
 				2881B4B12B7AB58100039F99 /* Dice6@3x.png in Resources */,
-				2881B4C12B7AB7FA00039F99 /* photo.jpeg in Resources */,
 				2881B4AE2B7AB58100039F99 /* Cover.jpeg in Resources */,
 				2881B4BB2B7AB58100039F99 /* Dice4@3x.png in Resources */,
 				28D6AC1F2B7879CE00721385 /* Assets.xcassets in Resources */,
